@@ -1,0 +1,252 @@
+{
+  "season": "2026/2027",
+  "round": "Pekan 7",
+  "lastUpdated": 1792944000000,
+  "matches": [
+    {
+      "date": "Minggu, 25 Okt",
+      "homeTeam": "Persita",
+      "awayTeam": "Bali United",
+      "scoreOrTime": "1 - 1",
+      "status": "FT",
+      "isFinished": true,
+      "isToday": true
+    },
+    {
+      "date": "Minggu, 25 Okt",
+      "homeTeam": "Arema FC",
+      "awayTeam": "Dewa United",
+      "scoreOrTime": "4 - 0",
+      "status": "FT",
+      "isFinished": true,
+      "isToday": true
+    },
+    {
+      "date": "Minggu, 25 Okt",
+      "homeTeam": "Garudayaksa FC",
+      "awayTeam": "Persib Bandung",
+      "scoreOrTime": "1 - 2",
+      "status": "FT",
+      "isFinished": true,
+      "isToday": true
+    },
+    {
+      "date": "Senin, 26 Okt",
+      "homeTeam": "Persebaya",
+      "awayTeam": "Madura United",
+      "scoreOrTime": "19:00",
+      "status": "Besok",
+      "isFinished": false,
+      "isToday": false
+    },
+    {
+      "date": "Senin, 26 Okt",
+      "homeTeam": "Persija Jakarta",
+      "awayTeam": "Persik Kediri",
+      "scoreOrTime": "19:00",
+      "status": "Besok",
+      "isFinished": false,
+      "isToday": false
+    },
+    {
+      "date": "Senin, 26 Okt",
+      "homeTeam": "Bhayangkara FC",
+      "awayTeam": "PSM Makassar",
+      "scoreOrTime": "19:00",
+      "status": "Besok",
+      "isFinished": false,
+      "isToday": false
+    },
+    {
+      "date": "Rabu, 28 Okt",
+      "homeTeam": "PSS Sleman",
+      "awayTeam": "Borneo FC",
+      "scoreOrTime": "15:30",
+      "status": "Rab",
+      "isFinished": false,
+      "isToday": false
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "team": "Persija Jakarta",
+      "played": 6,
+      "won": 5,
+      "draw": 0,
+      "lost": 1,
+      "goalDiff": 10,
+      "points": 15
+    },
+    {
+      "rank": 2,
+      "team": "Dewa United",
+      "played": 7,
+      "won": 4,
+      "draw": 2,
+      "lost": 1,
+      "goalDiff": 2,
+      "points": 14
+    },
+    {
+      "rank": 3,
+      "team": "Bali United",
+      "played": 7,
+      "won": 4,
+      "draw": 1,
+      "lost": 2,
+      "goalDiff": 12,
+      "points": 13
+    },
+    {
+      "rank": 4,
+      "team": "Madura United",
+      "played": 6,
+      "won": 4,
+      "draw": 1,
+      "lost": 1,
+      "goalDiff": 4,
+      "points": 13
+    },
+    {
+      "rank": 5,
+      "team": "Persib Bandung",
+      "played": 7,
+      "won": 4,
+      "draw": 1,
+      "lost": 2,
+      "goalDiff": 4,
+      "points": 13
+    },
+    {
+      "rank": 6,
+      "team": "Persita Tangerang",
+      "played": 6,
+      "won": 3,
+      "draw": 2,
+      "lost": 0,
+      "goalDiff": 3,
+      "points": 12
+    },
+    {
+      "rank": 7,
+      "team": "Bhayangkara FC",
+      "played": 6,
+      "won": 2,
+      "draw": 4,
+      "lost": 0,
+      "goalDiff": 3,
+      "points": 10
+    },
+    {
+      "rank": 8,
+      "team": "Persik Kediri",
+      "played": 6,
+      "won": 3,
+      "draw": 1,
+      "lost": 2,
+      "goalDiff": 3,
+      "points": 10
+    },
+    {
+      "rank": 9,
+      "team": "Arema FC",
+      "played": 7,
+      "won": 2,
+      "draw": 3,
+      "lost": 2,
+      "goalDiff": 2,
+      "points": 9
+    },
+    {
+      "rank": 10,
+      "team": "Persebaya Surabaya",
+      "played": 6,
+      "won": 2,
+      "draw": 3,
+      "lost": 1,
+      "goalDiff": 1,
+      "points": 9
+    },
+    {
+      "rank": 11,
+      "team": "PSM Makassar",
+      "played": 6,
+      "won": 2,
+      "draw": 2,
+      "lost": 2,
+      "goalDiff": -3,
+      "points": 8
+    },
+    {
+      "rank": 12,
+      "team": "Java United",
+      "played": 7,
+      "won": 2,
+      "draw": 3,
+      "lost": 2,
+      "goalDiff": -1,
+      "points": 6
+    },
+    {
+      "rank": 13,
+      "team": "Borneo FC",
+      "played": 5,
+      "won": 2,
+      "draw": 0,
+      "lost": 3,
+      "goalDiff": -2,
+      "points": 6
+    },
+    {
+      "rank": 14,
+      "team": "Garudayaksa FC",
+      "played": 7,
+      "won": 1,
+      "draw": 2,
+      "lost": 4,
+      "goalDiff": -8,
+      "points": 5
+    },
+    {
+      "rank": 15,
+      "team": "PSS Sleman",
+      "played": 6,
+      "won": 1,
+      "draw": 1,
+      "lost": 4,
+      "goalDiff": -2,
+      "points": 4
+    },
+    {
+      "rank": 16,
+      "team": "Isenmulang Kalteng",
+      "played": 7,
+      "won": 1,
+      "draw": 2,
+      "lost": 4,
+      "goalDiff": -9,
+      "points": 3
+    },
+    {
+      "rank": 17,
+      "team": "Persijap Jepara",
+      "played": 7,
+      "won": 0,
+      "draw": 1,
+      "lost": 6,
+      "goalDiff": -11,
+      "points": 3
+    },
+    {
+      "rank": 18,
+      "team": "PSIM Yogyakarta",
+      "played": 7,
+      "won": 0,
+      "draw": 2,
+      "lost": 5,
+      "goalDiff": -8,
+      "points": 2
+    }
+  ]
+}
