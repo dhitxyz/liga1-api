@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793033987489,
+  "lastUpdated": 1793035991323,
   "matches": [
     {
       "date": "Sabtu, 24 Okt",
@@ -55,7 +55,7 @@
       "scoreOrTime": "3 - 1",
       "status": "FT",
       "isFinished": true,
-      "isToday": true
+      "isToday": false
     },
     {
       "date": "Senin, 26 Okt",
@@ -64,7 +64,7 @@
       "scoreOrTime": "0 - 0",
       "status": "FT",
       "isFinished": true,
-      "isToday": true
+      "isToday": false
     },
     {
       "date": "Senin, 26 Okt",
@@ -73,16 +73,16 @@
       "scoreOrTime": "2 - 1",
       "status": "FT",
       "isFinished": true,
-      "isToday": true
+      "isToday": false
     },
     {
       "date": "Selasa, 27 Okt",
       "homeTeam": "PSS Sleman",
       "awayTeam": "Borneo FC",
       "scoreOrTime": "16:30",
-      "status": "Sel",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Jumat, 30 Okt",
