@@ -48,7 +48,7 @@ TEAM_NAME_MAP = {
 
 def clean_team_name(raw):
     raw_upper = raw.strip().upper()
-    for k, v in TEAM_NAME_MAP.items():
+    for k, v in sorted(TEAM_NAME_MAP.items(), key=lambda x: len(x[0]), reverse=True):
         if k in raw_upper:
             return v
     return raw.strip().title().replace("Fc", "FC")
@@ -161,6 +161,38 @@ def scrape_ileague():
 
     return standings, matches
 
+def scrape_fixtures_round(round_num=8):
+    url = f"https://ileague.id/fixtures/index/BRI_SUPER_LEAGUE_2026-27/{round_num}/0"
+    html = fetch_html(url)
+    if not html:
+        return []
+    matches = []
+    now_wib = datetime.datetime.utcnow() + datetime.timedelta(hours=7)
+    today_iso = now_wib.strftime("%Y-%m-%d")
+
+    sections = re.split(r'<div align=["\']left["\'][^>]*class=["\']col-md-12["\']>\s*', html)
+    for sec in sections[1:]:
+        match_rows = re.findall(r'href=["\']https://ileague.id/result/detail/BRI_SUPER_LEAGUE_2026-27/([0-9]{4}-[0-9]{2}-[0-9]{2})/([A-Za-z0-9_]+)/([A-Za-z0-9_]+)["\'].*?<span class=["\']badge[^>]*>([^<]+)</span>', sec, re.DOTALL)
+        for dt, h, a, t in match_rows:
+            home = clean_team_name(h.replace('_', ' '))
+            away = clean_team_name(a.replace('_', ' '))
+            date_display = format_date_id(dt)
+            try:
+                m_dt = datetime.datetime.strptime(dt, "%Y-%m-%d")
+                status = DAYS_ID[m_dt.weekday()][:3]
+            except Exception:
+                status = "Nanti"
+            matches.append({
+                "date": date_display,
+                "homeTeam": home,
+                "awayTeam": away,
+                "scoreOrTime": t.strip(),
+                "status": status,
+                "isFinished": False,
+                "isToday": (dt == today_iso)
+            })
+    return matches
+
 def main():
     current = load_current_data()
     print(f"Loaded existing data: {len(current.get('standings', []))} standings, {len(current.get('matches', []))} matches")
@@ -191,9 +223,17 @@ def main():
         current["standings"] = new_standings
         updated = True
 
-    if scraped_matches and len(scraped_matches) >= 3:
-        print(f"Successfully scraped {len(scraped_matches)} matches from ileague.id")
-        current["matches"] = scraped_matches
+    next_matches = scrape_fixtures_round(8)
+    all_matches = []
+    if scraped_matches:
+        all_matches.extend(scraped_matches)
+    if next_matches:
+        print(f"Successfully scraped {len(next_matches)} matches from Pekan 8 fixtures")
+        all_matches.extend(next_matches)
+
+    if all_matches:
+        print(f"Total matches updated: {len(all_matches)}")
+        current["matches"] = all_matches
         updated = True
 
     current["lastUpdated"] = int(time.time() * 1000)
