@@ -147,7 +147,7 @@ def scrape_ileague():
                     status = 'FT'
                 else:
                     time_clean = re.search(r'([0-2]?[0-9]:[0-5][0-9])', raw_score)
-                    score_or_time = time_clean.group(1) if time_clean else '19:00'
+                    score_or_time = wib_to_wita(time_clean.group(1) if time_clean else '19:00')
                     if match_date_iso == today_iso:
                         status = 'Hari Ini'
                     else:

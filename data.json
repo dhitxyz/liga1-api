@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1792994643242,
+  "lastUpdated": 1792994679992,
   "matches": [
     {
       "date": "Sabtu, 24 Okt",
@@ -52,7 +52,7 @@
       "date": "Senin, 26 Okt",
       "homeTeam": "Persebaya",
       "awayTeam": "Madura United",
-      "scoreOrTime": "19:00",
+      "scoreOrTime": "20:00",
       "status": "Hari Ini",
       "isFinished": false,
       "isToday": true
@@ -61,7 +61,7 @@
       "date": "Senin, 26 Okt",
       "homeTeam": "Bhayangkara FC",
       "awayTeam": "PSM Makassar",
-      "scoreOrTime": "19:00",
+      "scoreOrTime": "20:00",
       "status": "Hari Ini",
       "isFinished": false,
       "isToday": true
@@ -70,7 +70,7 @@
       "date": "Senin, 26 Okt",
       "homeTeam": "Persija Jakarta",
       "awayTeam": "Persik Kediri",
-      "scoreOrTime": "19:00",
+      "scoreOrTime": "20:00",
       "status": "Hari Ini",
       "isFinished": false,
       "isToday": true
@@ -79,7 +79,7 @@
       "date": "Selasa, 27 Okt",
       "homeTeam": "PSS Sleman",
       "awayTeam": "Borneo FC",
-      "scoreOrTime": "15:30",
+      "scoreOrTime": "16:30",
       "status": "Sel",
       "isFinished": false,
       "isToday": false
