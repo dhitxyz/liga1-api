@@ -46,6 +46,15 @@ TEAM_NAME_MAP = {
     "ADHYAKSA": "Adhyaksa FC"
 }
 
+def wib_to_wita(time_str):
+    try:
+        parts = time_str.strip().split(':')
+        h = (int(parts[0]) + 1) % 24
+        m = parts[1]
+        return f'{h:02d}:{m}'
+    except Exception:
+        return time_str
+
 def clean_team_name(raw):
     raw_upper = raw.strip().upper()
     for k, v in sorted(TEAM_NAME_MAP.items(), key=lambda x: len(x[0]), reverse=True):
@@ -186,7 +195,7 @@ def scrape_fixtures_round(round_num=8):
                 "date": date_display,
                 "homeTeam": home,
                 "awayTeam": away,
-                "scoreOrTime": t.strip(),
+                "scoreOrTime": wib_to_wita(t.strip()),
                 "status": status,
                 "isFinished": False,
                 "isToday": (dt == today_iso)

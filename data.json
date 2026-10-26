@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1792993568130,
+  "lastUpdated": 1792994643242,
   "matches": [
     {
       "date": "Sabtu, 24 Okt",
@@ -88,7 +88,7 @@
       "date": "Jumat, 30 Okt",
       "homeTeam": "Java United",
       "awayTeam": "Bhayangkara FC",
-      "scoreOrTime": "15:30",
+      "scoreOrTime": "16:30",
       "status": "Jum",
       "isFinished": false,
       "isToday": false
@@ -97,7 +97,7 @@
       "date": "Jumat, 30 Okt",
       "homeTeam": "Persebaya",
       "awayTeam": "Persijap Jepara",
-      "scoreOrTime": "19:00",
+      "scoreOrTime": "20:00",
       "status": "Jum",
       "isFinished": false,
       "isToday": false
@@ -106,7 +106,7 @@
       "date": "Sabtu, 31 Okt",
       "homeTeam": "PSM Makassar",
       "awayTeam": "Madura United",
-      "scoreOrTime": "15:30",
+      "scoreOrTime": "16:30",
       "status": "Sab",
       "isFinished": false,
       "isToday": false
@@ -115,7 +115,7 @@
       "date": "Sabtu, 31 Okt",
       "homeTeam": "Arema FC",
       "awayTeam": "Bali United",
-      "scoreOrTime": "15:30",
+      "scoreOrTime": "16:30",
       "status": "Sab",
       "isFinished": false,
       "isToday": false
@@ -124,7 +124,7 @@
       "date": "Sabtu, 31 Okt",
       "homeTeam": "Persik Kediri",
       "awayTeam": "Persita",
-      "scoreOrTime": "15:30",
+      "scoreOrTime": "16:30",
       "status": "Sab",
       "isFinished": false,
       "isToday": false
@@ -133,7 +133,7 @@
       "date": "Sabtu, 31 Okt",
       "homeTeam": "Dewa United",
       "awayTeam": "Persija Jakarta",
-      "scoreOrTime": "19:00",
+      "scoreOrTime": "20:00",
       "status": "Sab",
       "isFinished": false,
       "isToday": false
@@ -142,7 +142,7 @@
       "date": "Minggu, 1 Nov",
       "homeTeam": "PSIM Yogyakarta",
       "awayTeam": "Borneo FC",
-      "scoreOrTime": "15:30",
+      "scoreOrTime": "16:30",
       "status": "Min",
       "isFinished": false,
       "isToday": false
@@ -151,7 +151,7 @@
       "date": "Minggu, 1 Nov",
       "homeTeam": "Persib Bandung",
       "awayTeam": "Isenmulang Kalteng",
-      "scoreOrTime": "15:30",
+      "scoreOrTime": "16:30",
       "status": "Min",
       "isFinished": false,
       "isToday": false
@@ -160,7 +160,7 @@
       "date": "Minggu, 1 Nov",
       "homeTeam": "Garudayaksa FC",
       "awayTeam": "PSS Sleman",
-      "scoreOrTime": "19:00",
+      "scoreOrTime": "20:00",
       "status": "Min",
       "isFinished": false,
       "isToday": false
