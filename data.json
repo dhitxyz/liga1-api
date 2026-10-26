@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1792994679992,
+  "lastUpdated": 1793033987489,
   "matches": [
     {
       "date": "Sabtu, 24 Okt",
@@ -52,27 +52,27 @@
       "date": "Senin, 26 Okt",
       "homeTeam": "Persebaya",
       "awayTeam": "Madura United",
-      "scoreOrTime": "20:00",
-      "status": "Hari Ini",
-      "isFinished": false,
+      "scoreOrTime": "3 - 1",
+      "status": "FT",
+      "isFinished": true,
       "isToday": true
     },
     {
       "date": "Senin, 26 Okt",
       "homeTeam": "Bhayangkara FC",
       "awayTeam": "PSM Makassar",
-      "scoreOrTime": "20:00",
-      "status": "Hari Ini",
-      "isFinished": false,
+      "scoreOrTime": "0 - 0",
+      "status": "FT",
+      "isFinished": true,
       "isToday": true
     },
     {
       "date": "Senin, 26 Okt",
       "homeTeam": "Persija Jakarta",
       "awayTeam": "Persik Kediri",
-      "scoreOrTime": "20:00",
-      "status": "Hari Ini",
-      "isFinished": false,
+      "scoreOrTime": "2 - 1",
+      "status": "FT",
+      "isFinished": true,
       "isToday": true
     },
     {
@@ -175,7 +175,7 @@
       "draw": 0,
       "lost": 1,
       "goalDiff": 10,
-      "points": 15
+      "points": 18
     },
     {
       "rank": 2,
@@ -199,21 +199,21 @@
     },
     {
       "rank": 4,
-      "team": "Madura United",
-      "played": 6,
-      "won": 4,
-      "draw": 1,
-      "lost": 1,
-      "goalDiff": 4,
-      "points": 13
-    },
-    {
-      "rank": 5,
       "team": "Persib Bandung",
       "played": 7,
       "won": 4,
       "draw": 1,
       "lost": 2,
+      "goalDiff": 4,
+      "points": 13
+    },
+    {
+      "rank": 5,
+      "team": "Madura United",
+      "played": 6,
+      "won": 4,
+      "draw": 1,
+      "lost": 1,
       "goalDiff": 4,
       "points": 13
     },
@@ -229,16 +229,26 @@
     },
     {
       "rank": 7,
+      "team": "Persebaya",
+      "played": 7,
+      "won": 4,
+      "draw": 1,
+      "lost": 2,
+      "goalDiff": 0,
+      "points": 12
+    },
+    {
+      "rank": 8,
       "team": "Bhayangkara FC",
       "played": 6,
       "won": 2,
       "draw": 4,
       "lost": 0,
       "goalDiff": 3,
-      "points": 10
+      "points": 11
     },
     {
-      "rank": 8,
+      "rank": 9,
       "team": "Persik Kediri",
       "played": 6,
       "won": 3,
@@ -248,23 +258,13 @@
       "points": 10
     },
     {
-      "rank": 9,
+      "rank": 10,
       "team": "Arema FC",
       "played": 7,
       "won": 2,
       "draw": 3,
       "lost": 2,
       "goalDiff": 2,
-      "points": 9
-    },
-    {
-      "rank": 10,
-      "team": "Persebaya",
-      "played": 7,
-      "won": 4,
-      "draw": 1,
-      "lost": 2,
-      "goalDiff": 0,
       "points": 9
     },
     {
@@ -275,7 +275,7 @@
       "draw": 2,
       "lost": 2,
       "goalDiff": -3,
-      "points": 8
+      "points": 9
     },
     {
       "rank": 12,
