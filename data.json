@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1792945397063,
+  "lastUpdated": 1792991600443,
   "matches": [
     {
       "date": "Sabtu, 24 Okt",
@@ -25,55 +25,55 @@
       "date": "Minggu, 25 Okt",
       "homeTeam": "Arema FC",
       "awayTeam": "Dewa United",
-      "scoreOrTime": "4 - 0",
-      "status": "FT",
-      "isFinished": true,
-      "isToday": true
+      "scoreOrTime": "19:00",
+      "status": "Min",
+      "isFinished": false,
+      "isToday": false
     },
     {
       "date": "Minggu, 25 Okt",
       "homeTeam": "Persita",
       "awayTeam": "Bali United",
-      "scoreOrTime": "1 - 1",
-      "status": "FT",
-      "isFinished": true,
-      "isToday": true
+      "scoreOrTime": "19:00",
+      "status": "Min",
+      "isFinished": false,
+      "isToday": false
     },
     {
       "date": "Minggu, 25 Okt",
       "homeTeam": "Garudayaksa FC",
       "awayTeam": "Persib Bandung",
-      "scoreOrTime": "1 - 2",
-      "status": "FT",
-      "isFinished": true,
-      "isToday": true
+      "scoreOrTime": "19:00",
+      "status": "Min",
+      "isFinished": false,
+      "isToday": false
     },
     {
       "date": "Senin, 26 Okt",
       "homeTeam": "Persebaya",
       "awayTeam": "Madura United",
       "scoreOrTime": "19:00",
-      "status": "Sen",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Senin, 26 Okt",
       "homeTeam": "Bhayangkara FC",
       "awayTeam": "PSM Makassar",
       "scoreOrTime": "19:00",
-      "status": "Sen",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Senin, 26 Okt",
       "homeTeam": "Persija Jakarta",
       "awayTeam": "Persik Kediri",
       "scoreOrTime": "19:00",
-      "status": "Sen",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Selasa, 27 Okt",
