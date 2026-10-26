@@ -2,8 +2,16 @@ name: Update Liga 1 Data
 
 on:
   schedule:
-    # Runs every 3 hours (00:00, 03:00, 06:00, 09:00, 12:00, 15:00, 18:00, 21:00 WIB)
-    - cron: '0 */3 * * *'
+    # 07:00 WIB (08:00 WITA) - Persiapan Jadwal Pagi
+    - cron: '0 0 * * *'
+    # 12:00 WIB (13:00 WITA) - Cek Siang
+    - cron: '0 5 * * *'
+    # 17:45 & 18:30 WIB (18:45 & 19:30 WITA) - Laga Sore Selesai (Full Time)
+    - cron: '45 10 * * *'
+    - cron: '30 11 * * *'
+    # 21:15 & 22:00 WIB (22:15 & 23:00 WITA) - Laga Malam Selesai (Full Time)
+    - cron: '15 14 * * *'
+    - cron: '0 15 * * *'
   workflow_dispatch:
 
 permissions:
