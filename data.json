@@ -1,51 +1,51 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1792991635068,
+  "lastUpdated": 1792992922120,
   "matches": [
     {
       "date": "Sabtu, 24 Okt",
       "homeTeam": "Isenmulang Kalteng",
       "awayTeam": "PSIM Yogyakarta",
-      "scoreOrTime": "19:00",
-      "status": "Sab",
-      "isFinished": false,
+      "scoreOrTime": "0 - 0",
+      "status": "FT",
+      "isFinished": true,
       "isToday": false
     },
     {
       "date": "Sabtu, 24 Okt",
       "homeTeam": "Persija Jakarta",
       "awayTeam": "Java United",
-      "scoreOrTime": "19:00",
-      "status": "Sab",
-      "isFinished": false,
+      "scoreOrTime": "1 - 1",
+      "status": "FT",
+      "isFinished": true,
       "isToday": false
     },
     {
       "date": "Minggu, 25 Okt",
       "homeTeam": "Arema FC",
       "awayTeam": "Dewa United",
-      "scoreOrTime": "19:00",
-      "status": "Min",
-      "isFinished": false,
+      "scoreOrTime": "4 - 0",
+      "status": "FT",
+      "isFinished": true,
       "isToday": false
     },
     {
       "date": "Minggu, 25 Okt",
       "homeTeam": "Persita",
       "awayTeam": "Bali United",
-      "scoreOrTime": "19:00",
-      "status": "Min",
-      "isFinished": false,
+      "scoreOrTime": "1 - 1",
+      "status": "FT",
+      "isFinished": true,
       "isToday": false
     },
     {
       "date": "Minggu, 25 Okt",
       "homeTeam": "Garudayaksa FC",
       "awayTeam": "Persib Bandung",
-      "scoreOrTime": "19:00",
-      "status": "Min",
-      "isFinished": false,
+      "scoreOrTime": "1 - 2",
+      "status": "FT",
+      "isFinished": true,
       "isToday": false
     },
     {

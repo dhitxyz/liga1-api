@@ -120,10 +120,9 @@ def scrape_ileague():
         today_iso = now_wib.strftime("%Y-%m-%d")
 
         for c in cards[1:]:
-            titles = re.findall(r"<img[^>]*title=[\"\x27]([^\x27\"]+)[\"\x27]", c)
-            score_m = re.search(r"<span class=[\"\x27]score-span[\"\x27]>([^<]+)</span>", c)
-            link_m = re.search(r"BRI_SUPER_LEAGUE_2026-27/([0-9]{4}-[0-9]{2}-[0-9]{2})", c)
-            time_m = re.search(r"([0-2]?[0-9]:[0-5][0-9])", c)
+            titles = re.findall(r'<img[^>]*title=["\']([^"\']+)["\']', c)
+            score_m = re.search(r'<span class=["\']score-span["\'][^>]*>(.*?)</span>', c, re.DOTALL)
+            link_m = re.search(r'BRI_SUPER_LEAGUE_2026-27/([0-9]{4}-[0-9]{2}-[0-9]{2})', c)
 
             if len(titles) >= 2:
                 home = clean_team_name(titles[0])
@@ -131,23 +130,23 @@ def scrape_ileague():
                 match_date_iso = link_m.group(1) if link_m else today_iso
                 date_display = format_date_id(match_date_iso)
 
-                raw_score = score_m.group(1).strip() if score_m else ""
-                is_finished = bool(":" in raw_score and not any(k in raw_score.lower() for k in ["wib", "wita"]))
+                raw_score = re.sub(r'<[^>]+>', '', score_m.group(1)).strip() if score_m else ''
+                is_finished = bool(':' in raw_score and not any(k in raw_score.lower() for k in ['wib', 'wita']))
 
                 if is_finished:
-                    score_or_time = raw_score.replace(":", " - ").strip()
-                    status = "FT"
+                    score_or_time = raw_score.replace(':', ' - ').strip()
+                    status = 'FT'
                 else:
-                    score_or_time = time_m.group(1) if time_m else "19:00"
+                    time_clean = re.search(r'([0-2]?[0-9]:[0-5][0-9])', raw_score)
+                    score_or_time = time_clean.group(1) if time_clean else '19:00'
                     if match_date_iso == today_iso:
-                        status = "Hari Ini"
+                        status = 'Hari Ini'
                     else:
                         try:
-                            m_dt = datetime.datetime.strptime(match_date_iso, "%Y-%m-%d")
+                            m_dt = datetime.datetime.strptime(match_date_iso, '%Y-%m-%d')
                             status = DAYS_ID[m_dt.weekday()][:3]
                         except Exception:
-                            status = "Nanti"
-
+                            status = 'Nanti'
                 is_today = (match_date_iso == today_iso)
 
                 matches.append({
