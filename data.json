@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793106175931,
+  "lastUpdated": 1793127466591,
   "matches": [
     {
       "date": "Sabtu, 24 Okt",
@@ -82,7 +82,7 @@
       "scoreOrTime": "1 - 2",
       "status": "FT",
       "isFinished": true,
-      "isToday": true
+      "isToday": false
     },
     {
       "date": "Jumat, 30 Okt",
