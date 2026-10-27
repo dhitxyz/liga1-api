@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793072658520,
+  "lastUpdated": 1793095594410,
   "matches": [
     {
       "date": "Sabtu, 24 Okt",
@@ -79,9 +79,9 @@
       "date": "Selasa, 27 Okt",
       "homeTeam": "PSS Sleman",
       "awayTeam": "Borneo FC",
-      "scoreOrTime": "16:30",
-      "status": "Hari Ini",
-      "isFinished": false,
+      "scoreOrTime": "0 - 0",
+      "status": "FT",
+      "isFinished": true,
       "isToday": true
     },
     {
