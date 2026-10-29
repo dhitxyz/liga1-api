@@ -1,25 +1,25 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793286690726,
+  "lastUpdated": 1793304966398,
   "matches": [
     {
       "date": "Jumat, 30 Okt",
       "homeTeam": "Java United",
       "awayTeam": "Bhayangkara FC",
       "scoreOrTime": "16:30",
-      "status": "Jum",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Jumat, 30 Okt",
       "homeTeam": "Persebaya",
       "awayTeam": "Persijap Jepara",
       "scoreOrTime": "20:00",
-      "status": "Jum",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Sabtu, 31 Okt",
@@ -91,7 +91,7 @@
       "scoreOrTime": "16:30",
       "status": "Jum",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Jumat, 30 Okt",
@@ -100,7 +100,7 @@
       "scoreOrTime": "20:00",
       "status": "Jum",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Sabtu, 31 Okt",
