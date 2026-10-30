@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793359299838,
+  "lastUpdated": 1793372419881,
   "matches": [
     {
       "date": "Jumat, 30 Okt",
@@ -16,9 +16,9 @@
       "date": "Jumat, 30 Okt",
       "homeTeam": "Persebaya",
       "awayTeam": "Persijap Jepara",
-      "scoreOrTime": "20:00",
-      "status": "Hari Ini",
-      "isFinished": false,
+      "scoreOrTime": "1 - 1",
+      "status": "FT",
+      "isFinished": true,
       "isToday": true
     },
     {
@@ -83,15 +83,6 @@
       "status": "Min",
       "isFinished": false,
       "isToday": false
-    },
-    {
-      "date": "Jumat, 30 Okt",
-      "homeTeam": "Java United",
-      "awayTeam": "Bhayangkara FC",
-      "scoreOrTime": "20:00",
-      "status": "Jum",
-      "isFinished": false,
-      "isToday": true
     },
     {
       "date": "Sabtu, 31 Okt",
@@ -200,6 +191,16 @@
     },
     {
       "rank": 5,
+      "team": "Persebaya",
+      "played": 7,
+      "won": 4,
+      "draw": 1,
+      "lost": 2,
+      "goalDiff": 0,
+      "points": 13
+    },
+    {
+      "rank": 6,
       "team": "Madura United",
       "played": 6,
       "won": 4,
@@ -209,18 +210,8 @@
       "points": 13
     },
     {
-      "rank": 6,
-      "team": "Persita",
-      "played": 7,
-      "won": 4,
-      "draw": 1,
-      "lost": 2,
-      "goalDiff": 0,
-      "points": 12
-    },
-    {
       "rank": 7,
-      "team": "Persebaya",
+      "team": "Persita",
       "played": 7,
       "won": 4,
       "draw": 1,
@@ -336,7 +327,7 @@
       "draw": 1,
       "lost": 2,
       "goalDiff": 0,
-      "points": 1
+      "points": 2
     }
   ]
 }
