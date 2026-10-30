@@ -1,15 +1,15 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793339430668,
+  "lastUpdated": 1793359299838,
   "matches": [
     {
       "date": "Jumat, 30 Okt",
       "homeTeam": "Java United",
       "awayTeam": "Bhayangkara FC",
-      "scoreOrTime": "16:30",
-      "status": "Hari Ini",
-      "isFinished": false,
+      "scoreOrTime": "2 - 0",
+      "status": "FT",
+      "isFinished": true,
       "isToday": true
     },
     {
@@ -88,15 +88,6 @@
       "date": "Jumat, 30 Okt",
       "homeTeam": "Java United",
       "awayTeam": "Bhayangkara FC",
-      "scoreOrTime": "16:30",
-      "status": "Jum",
-      "isFinished": false,
-      "isToday": true
-    },
-    {
-      "date": "Jumat, 30 Okt",
-      "homeTeam": "Persebaya",
-      "awayTeam": "Persijap Jepara",
       "scoreOrTime": "20:00",
       "status": "Jum",
       "isFinished": false,
@@ -249,6 +240,16 @@
     },
     {
       "rank": 9,
+      "team": "Java United",
+      "played": 7,
+      "won": 2,
+      "draw": 3,
+      "lost": 2,
+      "goalDiff": -1,
+      "points": 10
+    },
+    {
+      "rank": 10,
       "team": "Persik Kediri",
       "played": 6,
       "won": 3,
@@ -258,7 +259,7 @@
       "points": 10
     },
     {
-      "rank": 10,
+      "rank": 11,
       "team": "Arema FC",
       "played": 7,
       "won": 2,
@@ -268,7 +269,7 @@
       "points": 9
     },
     {
-      "rank": 11,
+      "rank": 12,
       "team": "Borneo FC",
       "played": 5,
       "won": 2,
@@ -278,7 +279,7 @@
       "points": 9
     },
     {
-      "rank": 12,
+      "rank": 13,
       "team": "PSM Makassar",
       "played": 6,
       "won": 2,
@@ -286,16 +287,6 @@
       "lost": 2,
       "goalDiff": -3,
       "points": 9
-    },
-    {
-      "rank": 13,
-      "team": "Java United",
-      "played": 7,
-      "won": 2,
-      "draw": 3,
-      "lost": 2,
-      "goalDiff": -1,
-      "points": 7
     },
     {
       "rank": 14,
