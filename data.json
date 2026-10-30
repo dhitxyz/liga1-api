@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793372419881,
+  "lastUpdated": 1793390097229,
   "matches": [
     {
       "date": "Jumat, 30 Okt",
@@ -10,7 +10,7 @@
       "scoreOrTime": "2 - 0",
       "status": "FT",
       "isFinished": true,
-      "isToday": true
+      "isToday": false
     },
     {
       "date": "Jumat, 30 Okt",
@@ -19,43 +19,43 @@
       "scoreOrTime": "1 - 1",
       "status": "FT",
       "isFinished": true,
-      "isToday": true
+      "isToday": false
     },
     {
       "date": "Sabtu, 31 Okt",
       "homeTeam": "PSM Makassar",
       "awayTeam": "Madura United",
       "scoreOrTime": "16:30",
-      "status": "Sab",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Sabtu, 31 Okt",
       "homeTeam": "Persik Kediri",
       "awayTeam": "Persita",
       "scoreOrTime": "16:30",
-      "status": "Sab",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Sabtu, 31 Okt",
       "homeTeam": "Arema FC",
       "awayTeam": "Bali United",
       "scoreOrTime": "16:30",
-      "status": "Sab",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Sabtu, 31 Okt",
       "homeTeam": "Dewa United",
       "awayTeam": "Persija Jakarta",
       "scoreOrTime": "20:00",
-      "status": "Sab",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Minggu, 1 Nov",
@@ -91,7 +91,7 @@
       "scoreOrTime": "16:30",
       "status": "Sab",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Sabtu, 31 Okt",
@@ -100,7 +100,7 @@
       "scoreOrTime": "16:30",
       "status": "Sab",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Sabtu, 31 Okt",
@@ -109,7 +109,7 @@
       "scoreOrTime": "16:30",
       "status": "Sab",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Sabtu, 31 Okt",
@@ -118,7 +118,7 @@
       "scoreOrTime": "20:00",
       "status": "Sab",
       "isFinished": false,
-      "isToday": false
+      "isToday": true
     },
     {
       "date": "Minggu, 1 Nov",
