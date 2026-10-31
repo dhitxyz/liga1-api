@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793443400473,
+  "lastUpdated": 1793444010083,
   "matches": [
     {
       "date": "Sabtu, 31 Okt",
@@ -10,15 +10,6 @@
       "scoreOrTime": "0 - 1",
       "status": "FT",
       "isFinished": true,
-      "isToday": true
-    },
-    {
-      "date": "Sabtu, 31 Okt",
-      "homeTeam": "Dewa United",
-      "awayTeam": "Persija Jakarta",
-      "scoreOrTime": "20:00",
-      "status": "Hari Ini",
-      "isFinished": false,
       "isToday": true
     },
     {
@@ -68,6 +59,15 @@
     },
     {
       "date": "Sabtu, 31 Okt",
+      "homeTeam": "Persik Kediri",
+      "awayTeam": "Persita",
+      "scoreOrTime": "1 - 5",
+      "status": "FT",
+      "isFinished": true,
+      "isToday": true
+    },
+    {
+      "date": "Sabtu, 31 Okt",
       "homeTeam": "Arema FC",
       "awayTeam": "Bali United",
       "scoreOrTime": "1 - 3",
@@ -77,11 +77,11 @@
     },
     {
       "date": "Sabtu, 31 Okt",
-      "homeTeam": "Persik Kediri",
-      "awayTeam": "Persita",
-      "scoreOrTime": "0 - 0",
-      "status": "FT",
-      "isFinished": true,
+      "homeTeam": "Dewa United",
+      "awayTeam": "Persija Jakarta",
+      "scoreOrTime": "20:00",
+      "status": "Hari Ini",
+      "isFinished": false,
       "isToday": true
     }
   ],
@@ -118,6 +118,16 @@
     },
     {
       "rank": 4,
+      "team": "Persita",
+      "played": 7,
+      "won": 4,
+      "draw": 1,
+      "lost": 2,
+      "goalDiff": 0,
+      "points": 15
+    },
+    {
+      "rank": 5,
       "team": "Dewa United",
       "played": 7,
       "won": 4,
@@ -127,7 +137,7 @@
       "points": 14
     },
     {
-      "rank": 5,
+      "rank": 6,
       "team": "Persib Bandung",
       "played": 7,
       "won": 4,
@@ -137,7 +147,7 @@
       "points": 13
     },
     {
-      "rank": 6,
+      "rank": 7,
       "team": "Persebaya",
       "played": 7,
       "won": 4,
@@ -145,16 +155,6 @@
       "lost": 2,
       "goalDiff": 0,
       "points": 13
-    },
-    {
-      "rank": 7,
-      "team": "Persita",
-      "played": 7,
-      "won": 4,
-      "draw": 1,
-      "lost": 2,
-      "goalDiff": 0,
-      "points": 12
     },
     {
       "rank": 8,
