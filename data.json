@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793444010083,
+  "lastUpdated": 1793444250283,
   "matches": [
     {
       "date": "Sabtu, 31 Okt",
@@ -51,7 +51,7 @@
     {
       "date": "Jumat, 30 Okt",
       "homeTeam": "Persebaya",
-      "awayTeam": "Persijap Jepara",
+      "awayTeam": "Persija Jakarta",
       "scoreOrTime": "1 - 1",
       "status": "FT",
       "isFinished": true,
@@ -258,7 +258,7 @@
     },
     {
       "rank": 18,
-      "team": "Persijap Jepara",
+      "team": "Persija Jakarta",
       "played": 7,
       "won": 4,
       "draw": 1,

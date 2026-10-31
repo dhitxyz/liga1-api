@@ -1,6 +1,6 @@
 # Liga 1 API & Live Scraper for TV Home
 
-Automatic JSON endpoint and real-time scraper providing BRI Liga 1 Indonesia standings and match fixtures for TV Home Launcher.
+Automatic JSON endpoint and real-time live scraper providing BRI Liga 1 Indonesia standings and match fixtures for TV Home Launcher.
 
 ## Endpoints
 - **GitHub Raw CDN:**
@@ -15,31 +15,38 @@ Automatic JSON endpoint and real-time scraper providing BRI Liga 1 Indonesia sta
 
 ---
 
-## Fitur Bot Pterodactyl (`bot.py` / `main.py`)
+## Fitur Bot Node.js (`liga1.js`)
 1. **Dynamic Interval Polling**:
    - **Mode Match (15:00 - 23:30 WIB):** Cek setiap **60 detik (1 menit)** agar skor gol langsung terupdate instan ke TV!
    - **Mode Santai:** Cek setiap 15 menit.
-2. **Zero Dependencies**: Menggunakan Python Standard Library (`urllib`, `http.server`, `threading`, dll). Tidak perlu repot `pip install`.
+2. **Zero Dependencies**: Menggunakan native Node.js (`fetch`, `http`, `fs`). Tidak perlu `npm install` paket apa pun!
 3. **Auto-Sync to GitHub (Opsional)**:
-   - Jika `GITHUB_TOKEN` diisi di panel, bot akan otomatis meng-update file `data.json` di GitHub repo via REST API begitu ada perubahan skor.
-   - TV Anda yang membaca `raw.githubusercontent.com` otomatis terupdate tanpa perlu mengganti URL!
+   - Jika `GITHUB_TOKEN` diisi di konfigurasi PM2 / Environment, bot akan otomatis meng-update file `data.json` di GitHub repo via REST API begitu ada perubahan skor.
+   - TV Anda yang membaca `raw.githubusercontent.com` otomatis terupdate secara live.
 
 ---
 
-## Panduan Setup di Pterodactyl Panel
-1. Di Pterodactyl, buat server baru menggunakan egg **Python** (versi 3.8 / 3.9 / 3.10 / 3.11 / 3.12 bebas).
-2. Upload file berikut ke File Manager Pterodactyl:
-   - `bot.py`
-   - `main.py`
-   - `scraper.py`
+## Panduan Setup di PM2 / Pterodactyl Panel
+1. Di Pterodactyl, buat folder baru `liga1/`.
+2. Upload 2 file ke dalam folder `liga1/`:
+   - `liga1.js`
    - `data.json`
-   - `requirements.txt`
-3. Di menu **Startup**, pastikan Startup Command adalah:
-   ```bash
-   python main.py
+3. Tambahkan ke file `ecosystem.config.cjs`:
+   ```javascript
+   {
+     name: 'liga1-bot',
+     script: 'liga1.js',
+     cwd: './liga1',
+     instances: 1,
+     autorestart: true,
+     watch: false,
+     max_memory_restart: '60M',
+     restart_delay: 5000,
+     env: {
+       NODE_ENV: 'production',
+       GITHUB_TOKEN: '', // Opsional: Token GitHub PAT
+       GITHUB_REPO: 'dhitxyz/liga1-api'
+     }
+   }
    ```
-4. (Opsional tapi direkomendasikan) Di tab **Startup** atau **Variables**:
-   - Tambahkan Environment Variable:
-     - `GITHUB_TOKEN`: *Personal Access Token GitHub Anda (permission: repo/contents:write)*
-     - `GITHUB_REPO`: `dhitxyz/liga1-api`
-5. Tekan **Start**! Server akan otomatis berjalan 24/7 dan melacak skor secara live.
+4. Restart server via Console Pterodactyl.

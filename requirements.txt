@@ -1,2 +1,0 @@
-# Liga 1 Bot uses Python standard libraries only (urllib, http.server, threading, json, re)
-# No external pip dependencies are required!

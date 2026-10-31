@@ -375,8 +375,18 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(PORT, '0.0.0.0', () => {
-  log('START', `Liga 1 Node Bot running on port ${PORT}`);
-  if (GITHUB_TOKEN) log('START', `GitHub auto-sync enabled for ${GITHUB_REPO}`);
-  poll();
-});
+if (process.argv.includes('--once')) {
+  (async () => {
+    log('ONCE', 'Running single scrape execution...');
+    const { current, changed } = await runScraper();
+    log('ONCE', `Scrape complete. Total matches: ${current.matches?.length || 0}. Changed: ${changed}`);
+    process.exit(0);
+  })();
+} else {
+  server.listen(PORT, '0.0.0.0', () => {
+    log('START', `Liga 1 Node Bot running on port ${PORT}`);
+    if (GITHUB_TOKEN) log('START', `GitHub auto-sync enabled for ${GITHUB_REPO}`);
+    poll();
+  });
+}
+
