@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793455412209,
+  "lastUpdated": 1793455637087,
   "matches": [
     {
       "date": "Jumat, 30 Okt",
@@ -72,7 +72,7 @@
       "status": "FT",
       "isFinished": true,
       "isToday": true,
-      "time": "20:00",
+      "time": "19:00",
       "fixtureOrder": 15
     },
     {
@@ -223,16 +223,6 @@
   "standings": [
     {
       "rank": 1,
-      "team": "Persita",
-      "played": 8,
-      "won": 5,
-      "draw": 3,
-      "lost": 0,
-      "goalDiff": 11,
-      "points": 18
-    },
-    {
-      "rank": 2,
       "team": "Persija Jakarta",
       "played": 8,
       "won": 6,
@@ -242,7 +232,7 @@
       "points": 18
     },
     {
-      "rank": 3,
+      "rank": 2,
       "team": "Dewa United",
       "played": 8,
       "won": 5,
@@ -252,7 +242,7 @@
       "points": 17
     },
     {
-      "rank": 4,
+      "rank": 3,
       "team": "Bali United",
       "played": 8,
       "won": 5,
@@ -262,7 +252,7 @@
       "points": 16
     },
     {
-      "rank": 5,
+      "rank": 4,
       "team": "Madura United",
       "played": 8,
       "won": 5,
@@ -270,6 +260,16 @@
       "lost": 2,
       "goalDiff": 3,
       "points": 16
+    },
+    {
+      "rank": 5,
+      "team": "Persita",
+      "played": 7,
+      "won": 4,
+      "draw": 3,
+      "lost": 0,
+      "goalDiff": 7,
+      "points": 15
     },
     {
       "rank": 6,
