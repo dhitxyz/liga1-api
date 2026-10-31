@@ -13,8 +13,9 @@ const PORT = process.env.SERVER_PORT || process.env.PORT || 8080;
 const GITHUB_TOKEN = (process.env.GITHUB_TOKEN || '').trim();
 const GITHUB_REPO = (process.env.GITHUB_REPO || 'dhitxyz/liga1-api').trim();
 
-const FAST_POLL_MS = 60 * 1000;       // 1 menit saat jam match
-const IDLE_POLL_MS = 15 * 60 * 1000;  // 15 menit saat idle
+const FAST_POLL_MS = 60 * 1000;            // 1 menit saat ada laga LIVE
+const PRE_MATCH_POLL_MS = 15 * 60 * 1000;  // 15 menit jika ada laga hari ini yang belum tuntas
+const IDLE_POLL_MS = 2 * 60 * 60 * 1000;   // 2 jam jika seluruh laga sudah selesai (FT) atau hari libur
 
 const DAYS_ID = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'];
 const MONTHS_ID = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
@@ -343,14 +344,24 @@ async function syncToGithub(jsonContent) {
   return false;
 }
 
-function isMatchActive(data) {
-  const nowWib = new Date(Date.now() + 7 * 3600 * 1000);
-  const hour = nowWib.getUTCHours();
-  if (hour >= 15 && hour <= 23) return true;
-  for (const m of data.matches || []) {
-    if (m.isToday && !m.isFinished) return true;
+function getPollingState(data) {
+  const matches = data.matches || [];
+  let hasLive = false;
+  let hasPendingToday = false;
+
+  for (const m of matches) {
+    if (m.status && m.status.toUpperCase() === 'LIVE') {
+      hasLive = true;
+      break;
+    }
+    if (m.isToday && !m.isFinished) {
+      hasPendingToday = true;
+    }
   }
-  return false;
+
+  if (hasLive) return { delay: FAST_POLL_MS, label: 'LIVE 60s' };
+  if (hasPendingToday) return { delay: PRE_MATCH_POLL_MS, label: 'PRE-MATCH 15m' };
+  return { delay: IDLE_POLL_MS, label: 'IDLE 2 Jam' };
 }
 
 async function runScraper() {
@@ -414,7 +425,7 @@ async function poll() {
     const { current, changed, jsonContent } = await runScraper();
     cachedData = current;
 
-    const inMatch = isMatchActive(current);
+    const pollState = getPollingState(current);
     const todaySummary = (current.matches || [])
       .filter((m) => m.isToday)
       .map((m) => `${m.homeTeam} ${m.scoreOrTime} ${m.awayTeam}`)
@@ -426,11 +437,10 @@ async function poll() {
         await syncToGithub(jsonContent);
       }
     } else {
-      log('POLLER', `Checked (Mode: ${inMatch ? 'MATCH 60s' : 'IDLE 15m'}) - ${todaySummary}`);
+      log('POLLER', `Checked (Mode: ${pollState.label}) - ${todaySummary}`);
     }
 
-    const nextDelay = inMatch ? FAST_POLL_MS : IDLE_POLL_MS;
-    setTimeout(poll, nextDelay);
+    setTimeout(poll, pollState.delay);
   } catch (e) {
     log('ERROR', `Poll error: ${e.message}`);
     setTimeout(poll, 60000);
@@ -456,7 +466,7 @@ const server = http.createServer((req, res) => {
       service: 'Liga 1 Live Scraper (Node.js)',
       status: 'online',
       lastUpdated: cachedData.lastUpdated,
-      inMatchWindow: isMatchActive(cachedData),
+      mode: getPollingState(cachedData).label,
       githubSyncEnabled: Boolean(GITHUB_TOKEN),
     }, null, 2));
   } else if (url === '/data.json' || url === '/data') {
