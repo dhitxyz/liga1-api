@@ -41,6 +41,8 @@ const TEAM_NAME_MAP = {
   'ADHYAKSA': 'Adhyaksa FC',
 };
 
+const SORTED_TEAM_KEYS = Object.entries(TEAM_NAME_MAP).sort((a, b) => b[0].length - a[0].length);
+
 function log(tag, msg) {
   const now = new Date(Date.now() + 7 * 3600 * 1000);
   const timeStr = now.toISOString().replace('T', ' ').substring(0, 19) + ' WIB';
@@ -48,8 +50,13 @@ function log(tag, msg) {
 }
 
 function cleanTeamName(raw) {
+  if (!raw) return '';
   const upper = raw.trim().toUpperCase();
-  for (const [k, v] of Object.entries(TEAM_NAME_MAP)) {
+  for (const [k, v] of SORTED_TEAM_KEYS) {
+    const wordRegex = new RegExp('\\b' + k + '\\b', 'i');
+    if (wordRegex.test(upper)) return v;
+  }
+  for (const [k, v] of SORTED_TEAM_KEYS) {
     if (upper.includes(k)) return v;
   }
   return raw.trim().replace(/\b\w/g, (c) => c.toUpperCase()).replace(/Fc\b/g, 'FC');
@@ -67,9 +74,9 @@ function wibToWita(timeStr) {
 
 function formatDateId(dateStr) {
   try {
-    const dt = new Date(dateStr);
-    const dayName = DAYS_ID[(dt.getDay() + 6) % 7];
-    return `${dayName}, ${dt.getDate()} ${MONTHS_ID[dt.getMonth() + 1]}`;
+    const dt = dateStr.includes('T') ? new Date(dateStr) : new Date(dateStr + 'T12:00:00Z');
+    const dayName = DAYS_ID[(dt.getUTCDay() + 6) % 7];
+    return `${dayName}, ${dt.getUTCDate()} ${MONTHS_ID[dt.getUTCMonth() + 1]}`;
   } catch {
     return dateStr;
   }
@@ -162,13 +169,13 @@ async function scrapeIleague() {
           if (matchDateIso === todayIso) {
             status = 'Hari Ini';
           } else {
-            const dt = new Date(matchDateIso);
-            status = DAYS_ID[(dt.getDay() + 6) % 7].substring(0, 3);
+            status = '';
           }
         }
 
         matches.push({
           date: formatDateId(matchDateIso),
+          isoDate: matchDateIso,
           homeTeam: home,
           awayTeam: away,
           scoreOrTime,
@@ -201,11 +208,11 @@ async function scrapeFixturesRound(roundNum = 8) {
       const home = cleanTeamName(m[2].replace(/_/g, ' '));
       const away = cleanTeamName(m[3].replace(/_/g, ' '));
       const t = m[4].trim();
-      const mDt = new Date(dt);
-      const status = DAYS_ID[(mDt.getDay() + 6) % 7].substring(0, 3);
+      const status = dt === todayIso ? 'Hari Ini' : '';
 
       matches.push({
         date: formatDateId(dt),
+        isoDate: dt,
         homeTeam: home,
         awayTeam: away,
         scoreOrTime: wibToWita(t),
@@ -298,7 +305,15 @@ async function runScraper() {
   for (const m of scrapedMatches) matchMap.set(`${m.homeTeam}_${m.awayTeam}`, m);
 
   if (matchMap.size > 0) {
-    current.matches = Array.from(matchMap.values());
+    const list = Array.from(matchMap.values());
+    list.sort((a, b) => {
+      const dateA = a.isoDate || '';
+      const dateB = b.isoDate || '';
+      if (dateA !== dateB) return dateA.localeCompare(dateB);
+      if (a.isFinished !== b.isFinished) return a.isFinished ? -1 : 1;
+      return (a.scoreOrTime || '').localeCompare(b.scoreOrTime || '');
+    });
+    current.matches = list;
   }
 
   const afterCanonical = JSON.stringify({ standings: current.standings, matches: current.matches });
