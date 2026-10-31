@@ -202,17 +202,16 @@ def scrape_fixtures_round(round_num=8):
             })
     return matches
 
-def main():
+def run_scraper(save=True):
     current = load_current_data()
-    print(f"Loaded existing data: {len(current.get('standings', []))} standings, {len(current.get('matches', []))} matches")
+    before_canonical = json.dumps({
+        "standings": current.get("standings", []),
+        "matches": current.get("matches", [])
+    }, sort_keys=True)
 
     scraped_standings, scraped_matches = scrape_ileague()
 
-    updated = False
-
     if scraped_standings and len(scraped_standings) >= 15:
-        print(f"Successfully scraped {len(scraped_standings)} standings from ileague.id")
-        
         # Merge stats from current standings to retain played/won/draw/lost/goalDiff
         old_standings_map = {s["team"]: s for s in current.get("standings", [])}
         new_standings = []
@@ -230,28 +229,42 @@ def main():
                 "points": s["points"]
             })
         current["standings"] = new_standings
-        updated = True
 
     next_matches = scrape_fixtures_round(8)
-    all_matches = []
-    if scraped_matches:
-        all_matches.extend(scraped_matches)
+    
+    # Deduplicate matches: live/homepage matches take precedence over static fixture listings
+    match_map = {}
     if next_matches:
-        print(f"Successfully scraped {len(next_matches)} matches from Pekan 8 fixtures")
-        all_matches.extend(next_matches)
+        for m in next_matches:
+            key = (m["homeTeam"], m["awayTeam"])
+            match_map[key] = m
 
+    if scraped_matches:
+        for m in scraped_matches:
+            key = (m["homeTeam"], m["awayTeam"])
+            match_map[key] = m
+
+    all_matches = list(match_map.values())
     if all_matches:
-        print(f"Total matches updated: {len(all_matches)}")
         current["matches"] = all_matches
-        updated = True
 
-    current["lastUpdated"] = int(time.time() * 1000)
+    after_canonical = json.dumps({
+        "standings": current.get("standings", []),
+        "matches": current.get("matches", [])
+    }, sort_keys=True)
+    data_changed = (before_canonical != after_canonical)
 
-    with open(DATA_FILE, "w", encoding="utf-8") as f:
-        json.dump(current, f, indent=2, ensure_ascii=False)
-        f.write("\n")
+    if data_changed or save:
+        current["lastUpdated"] = int(time.time() * 1000)
+        with open(DATA_FILE, "w", encoding="utf-8") as f:
+            json.dump(current, f, indent=2, ensure_ascii=False)
+            f.write("\n")
 
-    print(f"Updated {DATA_FILE} successfully (Updated: {updated})")
+    return current, data_changed
+
+def main():
+    current, changed = run_scraper(save=True)
+    print(f"Scraper finished: {len(current.get('standings', []))} standings, {len(current.get('matches', []))} matches (Data changed: {changed})")
 
 if __name__ == "__main__":
     main()
