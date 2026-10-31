@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793446394354,
+  "lastUpdated": 1793447667994,
   "matches": [
     {
       "date": "Jumat, 30 Okt",
@@ -88,6 +88,96 @@
       "isoDate": "2026-11-01",
       "homeTeam": "Garudayaksa FC",
       "awayTeam": "PSS Sleman",
+      "scoreOrTime": "20:00",
+      "status": "",
+      "isFinished": false,
+      "isToday": false
+    },
+    {
+      "date": "Jumat, 6 Nov",
+      "isoDate": "2026-11-06",
+      "homeTeam": "PSIM Yogyakarta",
+      "awayTeam": "Dewa United",
+      "scoreOrTime": "16:30",
+      "status": "",
+      "isFinished": false,
+      "isToday": false
+    },
+    {
+      "date": "Jumat, 6 Nov",
+      "isoDate": "2026-11-06",
+      "homeTeam": "Madura United",
+      "awayTeam": "Arema FC",
+      "scoreOrTime": "20:00",
+      "status": "",
+      "isFinished": false,
+      "isToday": false
+    },
+    {
+      "date": "Sabtu, 7 Nov",
+      "isoDate": "2026-11-07",
+      "homeTeam": "Borneo FC",
+      "awayTeam": "PSM Makassar",
+      "scoreOrTime": "16:30",
+      "status": "",
+      "isFinished": false,
+      "isToday": false
+    },
+    {
+      "date": "Sabtu, 7 Nov",
+      "isoDate": "2026-11-07",
+      "homeTeam": "Persita",
+      "awayTeam": "Isenmulang Kalteng",
+      "scoreOrTime": "20:00",
+      "status": "",
+      "isFinished": false,
+      "isToday": false
+    },
+    {
+      "date": "Sabtu, 7 Nov",
+      "isoDate": "2026-11-07",
+      "homeTeam": "Persijap Jepara",
+      "awayTeam": "Garudayaksa FC",
+      "scoreOrTime": "20:00",
+      "status": "",
+      "isFinished": false,
+      "isToday": false
+    },
+    {
+      "date": "Sabtu, 7 Nov",
+      "isoDate": "2026-11-07",
+      "homeTeam": "Persija Jakarta",
+      "awayTeam": "Persebaya",
+      "scoreOrTime": "20:00",
+      "status": "",
+      "isFinished": false,
+      "isToday": false
+    },
+    {
+      "date": "Minggu, 8 Nov",
+      "isoDate": "2026-11-08",
+      "homeTeam": "PSS Sleman",
+      "awayTeam": "Bhayangkara FC",
+      "scoreOrTime": "16:30",
+      "status": "",
+      "isFinished": false,
+      "isToday": false
+    },
+    {
+      "date": "Minggu, 8 Nov",
+      "isoDate": "2026-11-08",
+      "homeTeam": "Bali United",
+      "awayTeam": "Persik Kediri",
+      "scoreOrTime": "16:30",
+      "status": "",
+      "isFinished": false,
+      "isToday": false
+    },
+    {
+      "date": "Minggu, 8 Nov",
+      "isoDate": "2026-11-08",
+      "homeTeam": "Java United",
+      "awayTeam": "Persib Bandung",
       "scoreOrTime": "20:00",
       "status": "",
       "isFinished": false,

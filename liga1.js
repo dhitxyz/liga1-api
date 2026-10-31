@@ -187,7 +187,10 @@ async function scrapeIleague() {
     }
   }
 
-  return { standings, matches };
+  const roundM = html.match(/fixtures\/index\/BRI_SUPER_LEAGUE_[^\/]+\/(\d+)/);
+  const currentRound = roundM ? parseInt(roundM[1], 10) : 8;
+
+  return { standings, matches, currentRound };
 }
 
 async function scrapeFixturesRound(roundNum = 8) {
@@ -280,7 +283,7 @@ async function runScraper() {
   const current = loadCurrentData();
   const beforeCanonical = JSON.stringify({ standings: current.standings, matches: current.matches });
 
-  const { standings: scrapedStandings, matches: scrapedMatches } = await scrapeIleague();
+  const { standings: scrapedStandings, matches: scrapedMatches, currentRound: scrapedRound } = await scrapeIleague();
 
   if (scrapedStandings.length >= 15) {
     const oldMap = new Map((current.standings || []).map((s) => [s.team, s]));
@@ -299,9 +302,13 @@ async function runScraper() {
     });
   }
 
-  const nextMatches = await scrapeFixturesRound(8);
+  const roundNum = scrapedRound || 8;
+  const currentRoundMatches = await scrapeFixturesRound(roundNum);
+  const nextRoundMatches = await scrapeFixturesRound(roundNum + 1);
+
   const matchMap = new Map();
-  for (const m of nextMatches) matchMap.set(`${m.homeTeam}_${m.awayTeam}`, m);
+  for (const m of nextRoundMatches) matchMap.set(`${m.homeTeam}_${m.awayTeam}`, m);
+  for (const m of currentRoundMatches) matchMap.set(`${m.homeTeam}_${m.awayTeam}`, m);
   for (const m of scrapedMatches) matchMap.set(`${m.homeTeam}_${m.awayTeam}`, m);
 
   if (matchMap.size > 0) {
