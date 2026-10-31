@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793470754494,
+  "lastUpdated": 1793471660192,
   "matches": [
     {
       "date": "Jumat, 30 Okt",
@@ -13,7 +13,7 @@
       "isFinished": true,
       "isToday": false,
       "time": "19:00",
-      "fixtureOrder": 10
+      "fixtureOrder": 12
     },
     {
       "date": "Jumat, 30 Okt",
@@ -25,7 +25,7 @@
       "isFinished": true,
       "isToday": false,
       "time": "19:00",
-      "fixtureOrder": 11
+      "fixtureOrder": 13
     },
     {
       "date": "Sabtu, 31 Okt",
@@ -37,19 +37,7 @@
       "isFinished": true,
       "isToday": false,
       "time": "19:00",
-      "fixtureOrder": 12
-    },
-    {
-      "date": "Sabtu, 31 Okt",
-      "isoDate": "2026-10-31",
-      "homeTeam": "Arema FC",
-      "awayTeam": "Bali United",
-      "scoreOrTime": "1 - 3",
-      "status": "FT",
-      "isFinished": true,
-      "isToday": false,
-      "time": "19:00",
-      "fixtureOrder": 13
+      "fixtureOrder": 14
     },
     {
       "date": "Sabtu, 31 Okt",
@@ -61,7 +49,19 @@
       "isFinished": true,
       "isToday": false,
       "time": "19:00",
-      "fixtureOrder": 14
+      "fixtureOrder": 15
+    },
+    {
+      "date": "Sabtu, 31 Okt",
+      "isoDate": "2026-10-31",
+      "homeTeam": "Arema FC",
+      "awayTeam": "Bali United",
+      "scoreOrTime": "1 - 3",
+      "status": "FT",
+      "isFinished": true,
+      "isToday": false,
+      "time": "19:00",
+      "fixtureOrder": 16
     },
     {
       "date": "Sabtu, 31 Okt",
@@ -73,19 +73,7 @@
       "isFinished": true,
       "isToday": false,
       "time": "19:00",
-      "fixtureOrder": 15
-    },
-    {
-      "date": "Minggu, 1 Nov",
-      "isoDate": "2026-11-01",
-      "homeTeam": "PSIM Yogyakarta",
-      "awayTeam": "Borneo FC",
-      "scoreOrTime": "16:30",
-      "status": "Hari Ini",
-      "isFinished": false,
-      "isToday": true,
-      "time": "16:30",
-      "fixtureOrder": 16
+      "fixtureOrder": 17
     },
     {
       "date": "Minggu, 1 Nov",
@@ -97,7 +85,19 @@
       "isFinished": false,
       "isToday": true,
       "time": "16:30",
-      "fixtureOrder": 17
+      "fixtureOrder": 10
+    },
+    {
+      "date": "Minggu, 1 Nov",
+      "isoDate": "2026-11-01",
+      "homeTeam": "PSIM Yogyakarta",
+      "awayTeam": "Borneo FC",
+      "scoreOrTime": "16:30",
+      "status": "Hari Ini",
+      "isFinished": false,
+      "isToday": true,
+      "time": "16:30",
+      "fixtureOrder": 18
     },
     {
       "date": "Minggu, 1 Nov",
@@ -109,7 +109,7 @@
       "isFinished": false,
       "isToday": true,
       "time": "20:00",
-      "fixtureOrder": 18
+      "fixtureOrder": 11
     },
     {
       "date": "Jumat, 6 Nov",
