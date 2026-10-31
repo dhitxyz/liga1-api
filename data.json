@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793450797930,
+  "lastUpdated": 1793451774223,
   "matches": [
     {
       "date": "Jumat, 30 Okt",
@@ -12,7 +12,8 @@
       "status": "FT",
       "isFinished": true,
       "isToday": false,
-      "time": "19:00"
+      "time": "19:00",
+      "fixtureOrder": 10
     },
     {
       "date": "Jumat, 30 Okt",
@@ -23,29 +24,8 @@
       "status": "FT",
       "isFinished": true,
       "isToday": false,
-      "time": "19:00"
-    },
-    {
-      "date": "Sabtu, 31 Okt",
-      "isoDate": "2026-10-31",
-      "homeTeam": "Arema FC",
-      "awayTeam": "Bali United",
-      "scoreOrTime": "1 - 3",
-      "status": "FT",
-      "isFinished": true,
-      "isToday": true,
-      "time": "19:00"
-    },
-    {
-      "date": "Sabtu, 31 Okt",
-      "isoDate": "2026-10-31",
-      "homeTeam": "Persik Kediri",
-      "awayTeam": "Persita",
-      "scoreOrTime": "1 - 5",
-      "status": "FT",
-      "isFinished": true,
-      "isToday": true,
-      "time": "19:00"
+      "time": "19:00",
+      "fixtureOrder": 11
     },
     {
       "date": "Sabtu, 31 Okt",
@@ -56,7 +36,32 @@
       "status": "FT",
       "isFinished": true,
       "isToday": true,
-      "time": "19:00"
+      "time": "19:00",
+      "fixtureOrder": 12
+    },
+    {
+      "date": "Sabtu, 31 Okt",
+      "isoDate": "2026-10-31",
+      "homeTeam": "Arema FC",
+      "awayTeam": "Bali United",
+      "scoreOrTime": "1 - 3",
+      "status": "FT",
+      "isFinished": true,
+      "isToday": true,
+      "time": "19:00",
+      "fixtureOrder": 13
+    },
+    {
+      "date": "Sabtu, 31 Okt",
+      "isoDate": "2026-10-31",
+      "homeTeam": "Persik Kediri",
+      "awayTeam": "Persita",
+      "scoreOrTime": "1 - 5",
+      "status": "FT",
+      "isFinished": true,
+      "isToday": true,
+      "time": "19:00",
+      "fixtureOrder": 14
     },
     {
       "date": "Sabtu, 31 Okt",
@@ -67,18 +72,8 @@
       "status": "LIVE",
       "isFinished": false,
       "isToday": true,
-      "time": "20:00"
-    },
-    {
-      "date": "Minggu, 1 Nov",
-      "isoDate": "2026-11-01",
-      "homeTeam": "Persib Bandung",
-      "awayTeam": "Isenmulang Kalteng",
-      "scoreOrTime": "16:30",
-      "status": "",
-      "isFinished": false,
-      "isToday": false,
-      "time": "16:30"
+      "time": "20:00",
+      "fixtureOrder": 15
     },
     {
       "date": "Minggu, 1 Nov",
@@ -89,7 +84,20 @@
       "status": "",
       "isFinished": false,
       "isToday": false,
-      "time": "16:30"
+      "time": "16:30",
+      "fixtureOrder": 16
+    },
+    {
+      "date": "Minggu, 1 Nov",
+      "isoDate": "2026-11-01",
+      "homeTeam": "Persib Bandung",
+      "awayTeam": "Isenmulang Kalteng",
+      "scoreOrTime": "16:30",
+      "status": "",
+      "isFinished": false,
+      "isToday": false,
+      "time": "16:30",
+      "fixtureOrder": 17
     },
     {
       "date": "Minggu, 1 Nov",
@@ -100,7 +108,8 @@
       "status": "",
       "isFinished": false,
       "isToday": false,
-      "time": "20:00"
+      "time": "20:00",
+      "fixtureOrder": 18
     },
     {
       "date": "Jumat, 6 Nov",
@@ -111,7 +120,8 @@
       "status": "",
       "isFinished": false,
       "isToday": false,
-      "time": "16:30"
+      "time": "16:30",
+      "fixtureOrder": 1
     },
     {
       "date": "Jumat, 6 Nov",
@@ -122,7 +132,8 @@
       "status": "",
       "isFinished": false,
       "isToday": false,
-      "time": "20:00"
+      "time": "20:00",
+      "fixtureOrder": 2
     },
     {
       "date": "Sabtu, 7 Nov",
@@ -133,29 +144,8 @@
       "status": "",
       "isFinished": false,
       "isToday": false,
-      "time": "16:30"
-    },
-    {
-      "date": "Sabtu, 7 Nov",
-      "isoDate": "2026-11-07",
-      "homeTeam": "Persija Jakarta",
-      "awayTeam": "Persebaya",
-      "scoreOrTime": "20:00",
-      "status": "",
-      "isFinished": false,
-      "isToday": false,
-      "time": "20:00"
-    },
-    {
-      "date": "Sabtu, 7 Nov",
-      "isoDate": "2026-11-07",
-      "homeTeam": "Persijap Jepara",
-      "awayTeam": "Garudayaksa FC",
-      "scoreOrTime": "20:00",
-      "status": "",
-      "isFinished": false,
-      "isToday": false,
-      "time": "20:00"
+      "time": "16:30",
+      "fixtureOrder": 3
     },
     {
       "date": "Sabtu, 7 Nov",
@@ -166,18 +156,32 @@
       "status": "",
       "isFinished": false,
       "isToday": false,
-      "time": "20:00"
+      "time": "20:00",
+      "fixtureOrder": 4
     },
     {
-      "date": "Minggu, 8 Nov",
-      "isoDate": "2026-11-08",
-      "homeTeam": "Bali United",
-      "awayTeam": "Persik Kediri",
-      "scoreOrTime": "16:30",
+      "date": "Sabtu, 7 Nov",
+      "isoDate": "2026-11-07",
+      "homeTeam": "Persijap Jepara",
+      "awayTeam": "Garudayaksa FC",
+      "scoreOrTime": "20:00",
       "status": "",
       "isFinished": false,
       "isToday": false,
-      "time": "16:30"
+      "time": "20:00",
+      "fixtureOrder": 5
+    },
+    {
+      "date": "Sabtu, 7 Nov",
+      "isoDate": "2026-11-07",
+      "homeTeam": "Persija Jakarta",
+      "awayTeam": "Persebaya",
+      "scoreOrTime": "20:00",
+      "status": "",
+      "isFinished": false,
+      "isToday": false,
+      "time": "20:00",
+      "fixtureOrder": 6
     },
     {
       "date": "Minggu, 8 Nov",
@@ -188,7 +192,20 @@
       "status": "",
       "isFinished": false,
       "isToday": false,
-      "time": "16:30"
+      "time": "16:30",
+      "fixtureOrder": 7
+    },
+    {
+      "date": "Minggu, 8 Nov",
+      "isoDate": "2026-11-08",
+      "homeTeam": "Bali United",
+      "awayTeam": "Persik Kediri",
+      "scoreOrTime": "16:30",
+      "status": "",
+      "isFinished": false,
+      "isToday": false,
+      "time": "16:30",
+      "fixtureOrder": 8
     },
     {
       "date": "Minggu, 8 Nov",
@@ -199,7 +216,8 @@
       "status": "",
       "isFinished": false,
       "isToday": false,
-      "time": "20:00"
+      "time": "20:00",
+      "fixtureOrder": 9
     }
   ],
   "standings": [

@@ -348,17 +348,19 @@ async function runScraper() {
   const nextRoundMatches = await scrapeFixturesRound(roundNum + 1);
 
   const matchMap = new Map();
+  let order = 0;
   for (const m of nextRoundMatches) {
-    matchMap.set(`${m.homeTeam}_${m.awayTeam}`, { ...m, time: m.scoreOrTime });
+    matchMap.set(`${m.homeTeam}_${m.awayTeam}`, { ...m, time: m.scoreOrTime, fixtureOrder: ++order });
   }
   for (const m of currentRoundMatches) {
-    matchMap.set(`${m.homeTeam}_${m.awayTeam}`, { ...m, time: m.scoreOrTime });
+    matchMap.set(`${m.homeTeam}_${m.awayTeam}`, { ...m, time: m.scoreOrTime, fixtureOrder: ++order });
   }
   for (const m of scrapedMatches) {
     const key = `${m.homeTeam}_${m.awayTeam}`;
     const existing = matchMap.get(key);
     const time = (existing && existing.time) ? existing.time : (m.scoreOrTime && m.scoreOrTime.includes(':') && !m.scoreOrTime.includes('-') ? m.scoreOrTime : '19:00');
-    matchMap.set(key, { ...existing, ...m, time });
+    const fOrder = existing ? existing.fixtureOrder : ++order;
+    matchMap.set(key, { ...existing, ...m, time, fixtureOrder: fOrder });
   }
 
   if (matchMap.size > 0) {
@@ -370,7 +372,7 @@ async function runScraper() {
       const timeA = a.time || '';
       const timeB = b.time || '';
       if (timeA !== timeB) return timeA.localeCompare(timeB);
-      return (a.homeTeam || '').localeCompare(b.homeTeam || '');
+      return (a.fixtureOrder || 0) - (b.fixtureOrder || 0);
     });
     current.matches = list;
   }
