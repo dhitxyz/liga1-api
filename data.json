@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793390097229,
+  "lastUpdated": 1793425361851,
   "matches": [
     {
       "date": "Jumat, 30 Okt",
@@ -23,6 +23,15 @@
     },
     {
       "date": "Sabtu, 31 Okt",
+      "homeTeam": "Arema FC",
+      "awayTeam": "Bali United",
+      "scoreOrTime": "16:30",
+      "status": "Hari Ini",
+      "isFinished": false,
+      "isToday": true
+    },
+    {
+      "date": "Sabtu, 31 Okt",
       "homeTeam": "PSM Makassar",
       "awayTeam": "Madura United",
       "scoreOrTime": "16:30",
@@ -41,15 +50,6 @@
     },
     {
       "date": "Sabtu, 31 Okt",
-      "homeTeam": "Arema FC",
-      "awayTeam": "Bali United",
-      "scoreOrTime": "16:30",
-      "status": "Hari Ini",
-      "isFinished": false,
-      "isToday": true
-    },
-    {
-      "date": "Sabtu, 31 Okt",
       "homeTeam": "Dewa United",
       "awayTeam": "Persija Jakarta",
       "scoreOrTime": "20:00",
@@ -59,8 +59,8 @@
     },
     {
       "date": "Minggu, 1 Nov",
-      "homeTeam": "PSIM Yogyakarta",
-      "awayTeam": "Borneo FC",
+      "homeTeam": "Persib Bandung",
+      "awayTeam": "Isenmulang Kalteng",
       "scoreOrTime": "16:30",
       "status": "Min",
       "isFinished": false,
@@ -68,8 +68,8 @@
     },
     {
       "date": "Minggu, 1 Nov",
-      "homeTeam": "Persib Bandung",
-      "awayTeam": "Isenmulang Kalteng",
+      "homeTeam": "PSIM Yogyakarta",
+      "awayTeam": "Borneo FC",
       "scoreOrTime": "16:30",
       "status": "Min",
       "isFinished": false,
