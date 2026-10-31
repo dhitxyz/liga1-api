@@ -115,27 +115,41 @@ async function fetchHtml(url) {
   return null;
 }
 
+async function scrapeStandings() {
+  const html = await fetchHtml('https://ileague.id/table/index/BRI_SUPER_LEAGUE_2026-27');
+  if (!html) return [];
+  const standings = [];
+  const tableM = html.match(/<table[^>]*result-point[^>]*>([\s\S]*?)<\/table>/i);
+  if (!tableM) return [];
+  const tbodyM = tableM[1].match(/<tbody[^>]*>([\s\S]*?)<\/tbody>/i);
+  if (!tbodyM) return [];
+  const rows = tbodyM[1].match(/<tr[^>]*>([\s\S]*?)<\/tr>/gi) || [];
+  for (const r of rows) {
+    const cells = (r.match(/<td[^>]*>([\s\S]*?)<\/td>/gi) || []).map((c) =>
+      c.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, '').trim()
+    );
+    if (cells.length >= 10 && /^\d+$/.test(cells[0])) {
+      standings.push({
+        rank: parseInt(cells[0], 10),
+        team: cleanTeamName(cells[1]),
+        played: parseInt(cells[2], 10),
+        won: parseInt(cells[3], 10),
+        draw: parseInt(cells[4], 10),
+        lost: parseInt(cells[5], 10),
+        goalDiff: parseInt(cells[8], 10),
+        points: parseInt(cells[9], 10),
+      });
+    }
+  }
+  return standings;
+}
+
 async function scrapeIleague() {
   const html = await fetchHtml('https://ileague.id/');
   if (!html) return { standings: [], matches: [] };
 
-  // 1. Standings
-  const standings = [];
-  const tableMatch = html.match(/<table[^>]*>([\s\S]*?)<\/table>/i);
-  if (tableMatch) {
-    const rows = tableMatch[1].match(/<tr[^>]*>([\s\S]*?)<\/tr>/gi) || [];
-    for (const r of rows) {
-      const cells = (r.match(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/gi) || [])
-        .map((c) => c.replace(/<[^>]+>/g, '').replace(/&nbsp;/g, '').trim());
-      if (cells.length >= 3 && /^\d+$/.test(cells[0])) {
-        standings.push({
-          rank: parseInt(cells[0], 10),
-          team: cleanTeamName(cells[1]),
-          points: /^\d+$/.test(cells[2]) ? parseInt(cells[2], 10) : 0,
-        });
-      }
-    }
-  }
+  // Standings from full table page
+  const standings = await scrapeStandings();
 
   // 2. Matches
   const matches = [];
@@ -326,20 +340,7 @@ async function runScraper() {
   const { standings: scrapedStandings, matches: scrapedMatches, currentRound: scrapedRound } = await scrapeIleague();
 
   if (scrapedStandings.length >= 15) {
-    const oldMap = new Map((current.standings || []).map((s) => [s.team, s]));
-    current.standings = scrapedStandings.map((s) => {
-      const old = oldMap.get(s.team) || {};
-      return {
-        rank: s.rank,
-        team: s.team,
-        played: old.played ?? 7,
-        won: old.won ?? 4,
-        draw: old.draw ?? 1,
-        lost: old.lost ?? 2,
-        goalDiff: old.goalDiff ?? 0,
-        points: s.points,
-      };
-    });
+    current.standings = scrapedStandings;
   }
 
   const roundNum = scrapedRound || 8;
