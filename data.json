@@ -1,15 +1,15 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793449167742,
+  "lastUpdated": 1793449232333,
   "matches": [
     {
       "date": "Sabtu, 31 Okt",
       "homeTeam": "PSM Makassar",
       "awayTeam": "Madura United",
-      "scoreOrTime": "20:00",
-      "status": "Sab",
-      "isFinished": false,
+      "scoreOrTime": "0 - 1",
+      "status": "FT",
+      "isFinished": true,
       "isToday": true
     },
     {
@@ -38,6 +38,51 @@
       "status": "Min",
       "isFinished": false,
       "isToday": false
+    },
+    {
+      "date": "Jumat, 30 Okt",
+      "homeTeam": "Java United",
+      "awayTeam": "Bhayangkara FC",
+      "scoreOrTime": "2 - 0",
+      "status": "FT",
+      "isFinished": true,
+      "isToday": false
+    },
+    {
+      "date": "Jumat, 30 Okt",
+      "homeTeam": "Persebaya",
+      "awayTeam": "Persija Jakarta",
+      "scoreOrTime": "1 - 1",
+      "status": "FT",
+      "isFinished": true,
+      "isToday": false
+    },
+    {
+      "date": "Sabtu, 31 Okt",
+      "homeTeam": "Persik Kediri",
+      "awayTeam": "Persita",
+      "scoreOrTime": "1 - 5",
+      "status": "FT",
+      "isFinished": true,
+      "isToday": true
+    },
+    {
+      "date": "Sabtu, 31 Okt",
+      "homeTeam": "Arema FC",
+      "awayTeam": "Bali United",
+      "scoreOrTime": "1 - 3",
+      "status": "FT",
+      "isFinished": true,
+      "isToday": true
+    },
+    {
+      "date": "Sabtu, 31 Okt",
+      "homeTeam": "Dewa United",
+      "awayTeam": "Persija Jakarta",
+      "scoreOrTime": "0 - 0",
+      "status": "FT",
+      "isFinished": true,
+      "isToday": true
     }
   ],
   "standings": [
