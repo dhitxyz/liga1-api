@@ -189,11 +189,31 @@ async function scrapeIleague() {
               if (detailHtml) {
                 const timelineIdx = detailHtml.indexOf('id="live_timeline"');
                 if (timelineIdx !== -1) {
-                  const timelineHtml = detailHtml.substring(timelineIdx, timelineIdx + 10000);
-                  const homeGoals = (timelineHtml.match(/<div class=["']alert alert-success col-lg-8\s*["'][^>]*>[\s\S]*?Goal!/gi) || []).length;
-                  const awayGoals = (timelineHtml.match(/<div class=["']alert alert-success col-lg-8 offset-lg-2["'][^>]*>[\s\S]*?Goal!/gi) || []).length;
-                  if (homeGoals > 0 || awayGoals > 0) {
-                    scoreOrTime = `${homeGoals} - ${awayGoals}`;
+                  const tabPaneIdx = detailHtml.indexOf('id="live_lineup"', timelineIdx);
+                  const timelineHtml = tabPaneIdx !== -1 ? detailHtml.substring(timelineIdx, tabPaneIdx) : detailHtml.substring(timelineIdx, timelineIdx + 80000);
+
+                  const goalRegex = /<div class=["']alert alert-success col-lg-8([^"']*)["'][^>]*>([\s\S]*?)<\/div>/gi;
+                  let m;
+                  const homeGoals = new Set();
+                  const awayGoals = new Set();
+                  while ((m = goalRegex.exec(timelineHtml)) !== null) {
+                    const isAway = m[1].includes('offset-lg-2');
+                    const text = m[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+                    if (/Goal!/i.test(text)) {
+                      const minM = text.match(/(\d+)'/);
+                      const min = minM ? minM[1] : '';
+                      const playerM = text.match(/(?:GO+L!+\s*)([\w\s.]+?)(?:\s+mencetak|\s*$)/i);
+                      const player = playerM ? playerM[1].trim() : text;
+                      const key = `${min}_${player}`;
+                      if (isAway) {
+                        awayGoals.add(key);
+                      } else {
+                        homeGoals.add(key);
+                      }
+                    }
+                  }
+                  if (homeGoals.size > 0 || awayGoals.size > 0) {
+                    scoreOrTime = `${homeGoals.size} - ${awayGoals.size}`;
                   }
                 }
               }
