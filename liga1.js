@@ -156,14 +156,41 @@ async function scrapeIleague() {
         const away = cleanTeamName(titles[1]);
         const matchDateIso = linkM ? linkM[1] : todayIso;
         const rawScore = scoreM ? scoreM[1].replace(/<[^>]+>/g, '').trim() : '';
-        const isFinished = rawScore.includes(':') && !rawScore.toLowerCase().includes('wib') && !rawScore.toLowerCase().includes('wita');
+        const isLiveCard = /<span class=["']score-span["'][^>]*id=["']live_\d+["']/i.test(c);
 
+        let isFinished = false;
         let scoreOrTime;
         let status;
-        if (isFinished) {
+
+        if (isLiveCard) {
+          isFinished = false;
+          status = 'LIVE';
+          scoreOrTime = rawScore.includes(':') ? rawScore.replace(':', ' - ').trim() : '0 - 0';
+
+          // Check live timeline on detail page for goal updates
+          const detailLinkM = c.match(/href=["'](https:\/\/ileague\.id\/result\/detail\/[^"']+)["']/);
+          if (detailLinkM) {
+            try {
+              const detailHtml = await fetchHtml(detailLinkM[1]);
+              if (detailHtml) {
+                const timelineIdx = detailHtml.indexOf('id="live_timeline"');
+                if (timelineIdx !== -1) {
+                  const timelineHtml = detailHtml.substring(timelineIdx, timelineIdx + 10000);
+                  const homeGoals = (timelineHtml.match(/<div class=["']alert alert-success col-lg-8\s*["'][^>]*>[\s\S]*?Goal!/gi) || []).length;
+                  const awayGoals = (timelineHtml.match(/<div class=["']alert alert-success col-lg-8 offset-lg-2["'][^>]*>[\s\S]*?Goal!/gi) || []).length;
+                  if (homeGoals > 0 || awayGoals > 0) {
+                    scoreOrTime = `${homeGoals} - ${awayGoals}`;
+                  }
+                }
+              }
+            } catch (e) {}
+          }
+        } else if (rawScore.includes(':') && !rawScore.toLowerCase().includes('wib') && !rawScore.toLowerCase().includes('wita')) {
+          isFinished = true;
           scoreOrTime = rawScore.replace(':', ' - ').trim();
           status = 'FT';
         } else {
+          isFinished = false;
           const timeClean = rawScore.match(/([0-2]?\d:[0-5]\d)/);
           scoreOrTime = wibToWita(timeClean ? timeClean[1] : '19:00');
           if (matchDateIso === todayIso) {
@@ -204,23 +231,36 @@ async function scrapeFixturesRound(roundNum = 8) {
 
   const sections = html.split(/<div align=["']left["'][^>]*class=["']col-md-12["']>/);
   for (const sec of sections.slice(1)) {
-    const regex = /href=["']https:\/\/ileague\.id\/result\/detail\/BRI_SUPER_LEAGUE_2026-27\/(\d{4}-\d{2}-\d{2})\/([A-Za-z0-9_]+)\/([A-Za-z0-9_]+)["'][\s\S]*?<span class=["']badge[^>]*>([^<]+)<\/span>/g;
+    const regex = /href=["']https:\/\/ileague\.id\/result\/detail\/BRI_SUPER_LEAGUE_2026-27\/(\d{4}-\d{2}-\d{2})\/([A-Za-z0-9_]+)\/([A-Za-z0-9_]+)["'][\s\S]*?<span class=["']badge[^>]*>([\s\S]*?)<\/span>/g;
     let m;
     while ((m = regex.exec(sec)) !== null) {
       const dt = m[1];
       const home = cleanTeamName(m[2].replace(/_/g, ' '));
       const away = cleanTeamName(m[3].replace(/_/g, ' '));
-      const t = m[4].trim();
-      const status = dt === todayIso ? 'Hari Ini' : '';
+      const rawBadge = m[4].replace(/<[^>]+>/g, '').trim();
+
+      let scoreOrTime;
+      let status;
+      let isFinished;
+
+      if (/^FT\b/i.test(rawBadge)) {
+        isFinished = true;
+        status = 'FT';
+        scoreOrTime = rawBadge.replace(/^FT\s*/i, '').replace(':', ' - ').trim();
+      } else {
+        isFinished = false;
+        scoreOrTime = wibToWita(rawBadge);
+        status = dt === todayIso ? 'Hari Ini' : '';
+      }
 
       matches.push({
         date: formatDateId(dt),
         isoDate: dt,
         homeTeam: home,
         awayTeam: away,
-        scoreOrTime: wibToWita(t),
+        scoreOrTime,
         status,
-        isFinished: false,
+        isFinished,
         isToday: dt === todayIso,
       });
     }
@@ -307,9 +347,18 @@ async function runScraper() {
   const nextRoundMatches = await scrapeFixturesRound(roundNum + 1);
 
   const matchMap = new Map();
-  for (const m of nextRoundMatches) matchMap.set(`${m.homeTeam}_${m.awayTeam}`, m);
-  for (const m of currentRoundMatches) matchMap.set(`${m.homeTeam}_${m.awayTeam}`, m);
-  for (const m of scrapedMatches) matchMap.set(`${m.homeTeam}_${m.awayTeam}`, m);
+  for (const m of nextRoundMatches) {
+    matchMap.set(`${m.homeTeam}_${m.awayTeam}`, { ...m, time: m.scoreOrTime });
+  }
+  for (const m of currentRoundMatches) {
+    matchMap.set(`${m.homeTeam}_${m.awayTeam}`, { ...m, time: m.scoreOrTime });
+  }
+  for (const m of scrapedMatches) {
+    const key = `${m.homeTeam}_${m.awayTeam}`;
+    const existing = matchMap.get(key);
+    const time = (existing && existing.time) ? existing.time : (m.scoreOrTime && m.scoreOrTime.includes(':') && !m.scoreOrTime.includes('-') ? m.scoreOrTime : '19:00');
+    matchMap.set(key, { ...existing, ...m, time });
+  }
 
   if (matchMap.size > 0) {
     const list = Array.from(matchMap.values());
@@ -317,8 +366,10 @@ async function runScraper() {
       const dateA = a.isoDate || '';
       const dateB = b.isoDate || '';
       if (dateA !== dateB) return dateA.localeCompare(dateB);
-      if (a.isFinished !== b.isFinished) return a.isFinished ? -1 : 1;
-      return (a.scoreOrTime || '').localeCompare(b.scoreOrTime || '');
+      const timeA = a.time || '';
+      const timeB = b.time || '';
+      if (timeA !== timeB) return timeA.localeCompare(timeB);
+      return (a.homeTeam || '').localeCompare(b.homeTeam || '');
     });
     current.matches = list;
   }
