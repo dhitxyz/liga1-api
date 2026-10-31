@@ -1,0 +1,17 @@
+{
+  "name": "liga1-api",
+  "version": "1.0.0",
+  "description": "Liga 1 Live Scraper & API Bot",
+  "main": "liga1.js",
+  "scripts": {
+    "start": "node liga1.js"
+  },
+  "keywords": [
+    "liga1",
+    "scraper",
+    "soccer",
+    "indonesia"
+  ],
+  "author": "dhitxyz",
+  "license": "MIT"
+}
