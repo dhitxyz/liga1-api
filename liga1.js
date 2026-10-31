@@ -216,6 +216,14 @@ async function scrapeIleague() {
                   if (homeGoals.size > 0 || awayGoals.size > 0) {
                     scoreOrTime = `${homeGoals.size} - ${awayGoals.size}`;
                   }
+
+                  // Auto-detect Full Time (FT) if match reached 90+ minutes
+                  const minutes = Array.from(timelineHtml.matchAll(/(\d+)'/g)).map((x) => parseInt(x[1], 10));
+                  const maxMinute = minutes.length > 0 ? Math.max(...minutes) : 0;
+                  if (maxMinute >= 90) {
+                    isFinished = true;
+                    status = 'FT';
+                  }
                 }
               }
             } catch (e) {}
@@ -406,6 +414,51 @@ async function runScraper() {
       return (a.fixtureOrder || 0) - (b.fixtureOrder || 0);
     });
     current.matches = list;
+  }
+
+  // Auto-apply finished matches to standings if ileague.id table has not updated yet
+  if (current.standings && current.standings.length > 0) {
+    for (const m of current.matches || []) {
+      if (m.isFinished && m.scoreOrTime && m.scoreOrTime.includes('-')) {
+        const parts = m.scoreOrTime.split('-').map((s) => parseInt(s.trim(), 10));
+        if (!isNaN(parts[0]) && !isNaN(parts[1])) {
+          const homeS = current.standings.find((s) => s.team.includes(m.homeTeam) || m.homeTeam.includes(s.team));
+          const awayS = current.standings.find((s) => s.team.includes(m.awayTeam) || m.awayTeam.includes(s.team));
+          if (homeS && homeS.played === 7 && m.date && m.date.includes('31 Okt')) {
+            homeS.played = 8;
+            if (parts[0] > parts[1]) {
+              homeS.won += 1;
+              homeS.points += 3;
+            } else if (parts[0] === parts[1]) {
+              homeS.draw += 1;
+              homeS.points += 1;
+            } else {
+              homeS.lost += 1;
+            }
+            homeS.goalDiff += (parts[0] - parts[1]);
+          }
+          if (awayS && awayS.played === 7 && m.date && m.date.includes('31 Okt')) {
+            awayS.played = 8;
+            if (parts[1] > parts[0]) {
+              awayS.won += 1;
+              awayS.points += 3;
+            } else if (parts[1] === parts[0]) {
+              awayS.draw += 1;
+              awayS.points += 1;
+            } else {
+              awayS.lost += 1;
+            }
+            awayS.goalDiff += (parts[1] - parts[0]);
+          }
+        }
+      }
+    }
+    current.standings.sort((a, b) => {
+      if (b.points !== a.points) return b.points - a.points;
+      if (b.goalDiff !== a.goalDiff) return b.goalDiff - a.goalDiff;
+      return b.won - a.won;
+    });
+    current.standings.forEach((s, idx) => s.rank = idx + 1);
   }
 
   const afterCanonical = JSON.stringify({ standings: current.standings, matches: current.matches });
