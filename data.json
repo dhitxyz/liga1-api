@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793528363147,
+  "lastUpdated": 1793528677446,
   "matches": [
     {
       "date": "Jumat, 30 Okt",
@@ -263,6 +263,16 @@
     },
     {
       "rank": 5,
+      "team": "Persib Bandung",
+      "played": 8,
+      "won": 5,
+      "draw": 1,
+      "lost": 2,
+      "goalDiff": 7,
+      "points": 16
+    },
+    {
+      "rank": 6,
       "team": "Madura United",
       "played": 8,
       "won": 5,
@@ -270,16 +280,6 @@
       "lost": 2,
       "goalDiff": 3,
       "points": 16
-    },
-    {
-      "rank": 6,
-      "team": "Persib Bandung",
-      "played": 7,
-      "won": 4,
-      "draw": 1,
-      "lost": 2,
-      "goalDiff": 3,
-      "points": 13
     },
     {
       "rank": 7,
@@ -374,11 +374,11 @@
     {
       "rank": 16,
       "team": "Isenmulang Kalteng",
-      "played": 7,
+      "played": 8,
       "won": 1,
       "draw": 2,
-      "lost": 4,
-      "goalDiff": -9,
+      "lost": 5,
+      "goalDiff": -13,
       "points": 3
     },
     {
