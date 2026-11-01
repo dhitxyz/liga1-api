@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793541226443,
+  "lastUpdated": 1793545351435,
   "matches": [
     {
       "date": "Jumat, 30 Okt",
@@ -108,7 +108,7 @@
       "status": "FT",
       "isFinished": true,
       "isToday": true,
-      "time": "20:00",
+      "time": "19:00",
       "fixtureOrder": 18
     },
     {
@@ -223,16 +223,6 @@
   "standings": [
     {
       "rank": 1,
-      "team": "Persita",
-      "played": 8,
-      "won": 5,
-      "draw": 3,
-      "lost": 0,
-      "goalDiff": 11,
-      "points": 18
-    },
-    {
-      "rank": 2,
       "team": "Persija Jakarta",
       "played": 8,
       "won": 6,
@@ -242,7 +232,7 @@
       "points": 18
     },
     {
-      "rank": 3,
+      "rank": 2,
       "team": "Dewa United",
       "played": 8,
       "won": 5,
@@ -252,7 +242,7 @@
       "points": 17
     },
     {
-      "rank": 4,
+      "rank": 3,
       "team": "Bali United",
       "played": 8,
       "won": 5,
@@ -262,7 +252,7 @@
       "points": 16
     },
     {
-      "rank": 5,
+      "rank": 4,
       "team": "Persib Bandung",
       "played": 8,
       "won": 5,
@@ -272,7 +262,7 @@
       "points": 16
     },
     {
-      "rank": 6,
+      "rank": 5,
       "team": "Madura United",
       "played": 8,
       "won": 5,
@@ -280,6 +270,16 @@
       "lost": 2,
       "goalDiff": 3,
       "points": 16
+    },
+    {
+      "rank": 6,
+      "team": "Persita",
+      "played": 7,
+      "won": 4,
+      "draw": 3,
+      "lost": 0,
+      "goalDiff": 7,
+      "points": 15
     },
     {
       "rank": 7,
@@ -354,12 +354,12 @@
     {
       "rank": 14,
       "team": "Garudayaksa FC",
-      "played": 7,
-      "won": 1,
+      "played": 8,
+      "won": 2,
       "draw": 2,
       "lost": 4,
-      "goalDiff": -7,
-      "points": 5
+      "goalDiff": -5,
+      "points": 8
     },
     {
       "rank": 15,
@@ -374,11 +374,11 @@
     {
       "rank": 16,
       "team": "PSS Sleman",
-      "played": 7,
+      "played": 8,
       "won": 1,
       "draw": 1,
-      "lost": 5,
-      "goalDiff": -3,
+      "lost": 6,
+      "goalDiff": -5,
       "points": 4
     },
     {
