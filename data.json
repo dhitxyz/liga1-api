@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793528742461,
+  "lastUpdated": 1793529237760,
   "matches": [
     {
       "date": "Jumat, 30 Okt",
@@ -81,8 +81,8 @@
       "homeTeam": "PSIM Yogyakarta",
       "awayTeam": "Borneo FC",
       "scoreOrTime": "2 - 1",
-      "status": "LIVE",
-      "isFinished": false,
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "16:30",
       "fixtureOrder": 16
@@ -334,11 +334,11 @@
     {
       "rank": 12,
       "team": "Borneo FC",
-      "played": 6,
+      "played": 7,
       "won": 3,
       "draw": 0,
-      "lost": 3,
-      "goalDiff": -1,
+      "lost": 4,
+      "goalDiff": -2,
       "points": 9
     },
     {
@@ -363,6 +363,16 @@
     },
     {
       "rank": 15,
+      "team": "PSIM Yogyakarta",
+      "played": 8,
+      "won": 1,
+      "draw": 2,
+      "lost": 5,
+      "goalDiff": -7,
+      "points": 5
+    },
+    {
+      "rank": 16,
       "team": "PSS Sleman",
       "played": 7,
       "won": 1,
@@ -372,7 +382,7 @@
       "points": 4
     },
     {
-      "rank": 16,
+      "rank": 17,
       "team": "Isenmulang Kalteng",
       "played": 8,
       "won": 1,
@@ -380,16 +390,6 @@
       "lost": 5,
       "goalDiff": -13,
       "points": 3
-    },
-    {
-      "rank": 17,
-      "team": "PSIM Yogyakarta",
-      "played": 7,
-      "won": 0,
-      "draw": 2,
-      "lost": 5,
-      "goalDiff": -8,
-      "points": 2
     },
     {
       "rank": 18,
