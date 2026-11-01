@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793540227551,
+  "lastUpdated": 1793541226443,
   "matches": [
     {
       "date": "Jumat, 30 Okt",
@@ -105,8 +105,8 @@
       "homeTeam": "Garudayaksa FC",
       "awayTeam": "PSS Sleman",
       "scoreOrTime": "3 - 1",
-      "status": "LIVE",
-      "isFinished": false,
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "20:00",
       "fixtureOrder": 18
