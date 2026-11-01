@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 7",
-  "lastUpdated": 1793523996425,
+  "lastUpdated": 1793524504640,
   "matches": [
     {
       "date": "Jumat, 30 Okt",
@@ -92,9 +92,9 @@
       "isoDate": "2026-11-01",
       "homeTeam": "Persib Bandung",
       "awayTeam": "Isenmulang Kalteng",
-      "scoreOrTime": "2 - 0",
-      "status": "FT",
-      "isFinished": true,
+      "scoreOrTime": "3 - 0",
+      "status": "LIVE",
+      "isFinished": false,
       "isToday": true,
       "time": "16:30",
       "fixtureOrder": 17
