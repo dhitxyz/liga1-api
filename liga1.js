@@ -93,7 +93,7 @@ function loadCurrentData() {
   }
   return {
     season: '2026/2027',
-    round: 'Pekan 7',
+    round: 'Pekan 9',
     lastUpdated: Date.now(),
     matches: [],
     standings: [],
