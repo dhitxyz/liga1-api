@@ -391,7 +391,8 @@ async function runScraper() {
     current.standings = scrapedStandings;
   }
 
-  const roundNum = scrapedRound || 8;
+  const roundNum = scrapedRound || 9;
+  current.round = `Pekan ${roundNum}`;
   const currentRoundMatches = await scrapeFixturesRound(roundNum);
   const nextRoundMatches = await scrapeFixturesRound(roundNum + 1);
 
