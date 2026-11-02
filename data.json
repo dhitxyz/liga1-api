@@ -229,7 +229,8 @@
       "draw": 0,
       "lost": 2,
       "goalDiff": 10,
-      "points": 18
+      "points": 18,
+      "prevRank": 1
     },
     {
       "rank": 2,
@@ -239,7 +240,8 @@
       "draw": 2,
       "lost": 1,
       "goalDiff": 3,
-      "points": 17
+      "points": 17,
+      "prevRank": 3
     },
     {
       "rank": 3,
@@ -249,7 +251,8 @@
       "draw": 1,
       "lost": 2,
       "goalDiff": 14,
-      "points": 16
+      "points": 16,
+      "prevRank": 2
     },
     {
       "rank": 4,
@@ -259,7 +262,8 @@
       "draw": 1,
       "lost": 2,
       "goalDiff": 7,
-      "points": 16
+      "points": 16,
+      "prevRank": 6
     },
     {
       "rank": 5,
@@ -269,7 +273,8 @@
       "draw": 1,
       "lost": 2,
       "goalDiff": 3,
-      "points": 16
+      "points": 16,
+      "prevRank": 4
     },
     {
       "rank": 6,
@@ -279,7 +284,8 @@
       "draw": 3,
       "lost": 0,
       "goalDiff": 7,
-      "points": 15
+      "points": 15,
+      "prevRank": 5
     },
     {
       "rank": 7,
@@ -289,7 +295,8 @@
       "draw": 4,
       "lost": 1,
       "goalDiff": 3,
-      "points": 13
+      "points": 13,
+      "prevRank": 7
     },
     {
       "rank": 8,
@@ -299,7 +306,8 @@
       "draw": 5,
       "lost": 1,
       "goalDiff": 1,
-      "points": 11
+      "points": 11,
+      "prevRank": 8
     },
     {
       "rank": 9,
@@ -309,7 +317,8 @@
       "draw": 3,
       "lost": 2,
       "goalDiff": 2,
-      "points": 10
+      "points": 10,
+      "prevRank": 9
     },
     {
       "rank": 10,
@@ -319,7 +328,8 @@
       "draw": 1,
       "lost": 4,
       "goalDiff": -2,
-      "points": 10
+      "points": 10,
+      "prevRank": 10
     },
     {
       "rank": 11,
@@ -329,7 +339,8 @@
       "draw": 3,
       "lost": 3,
       "goalDiff": 0,
-      "points": 9
+      "points": 9,
+      "prevRank": 11
     },
     {
       "rank": 12,
@@ -339,7 +350,8 @@
       "draw": 0,
       "lost": 4,
       "goalDiff": -2,
-      "points": 9
+      "points": 9,
+      "prevRank": 12
     },
     {
       "rank": 13,
@@ -349,7 +361,8 @@
       "draw": 3,
       "lost": 3,
       "goalDiff": -4,
-      "points": 9
+      "points": 9,
+      "prevRank": 13
     },
     {
       "rank": 14,
@@ -359,7 +372,8 @@
       "draw": 2,
       "lost": 4,
       "goalDiff": -5,
-      "points": 8
+      "points": 8,
+      "prevRank": 14
     },
     {
       "rank": 15,
@@ -369,7 +383,8 @@
       "draw": 2,
       "lost": 5,
       "goalDiff": -7,
-      "points": 5
+      "points": 5,
+      "prevRank": 15
     },
     {
       "rank": 16,
@@ -379,7 +394,8 @@
       "draw": 1,
       "lost": 6,
       "goalDiff": -5,
-      "points": 4
+      "points": 4,
+      "prevRank": 16
     },
     {
       "rank": 17,
@@ -389,7 +405,8 @@
       "draw": 2,
       "lost": 5,
       "goalDiff": -13,
-      "points": 3
+      "points": 3,
+      "prevRank": 17
     },
     {
       "rank": 18,
@@ -399,7 +416,8 @@
       "draw": 2,
       "lost": 6,
       "goalDiff": -12,
-      "points": 2
+      "points": 2,
+      "prevRank": 18
     }
   ]
 }
