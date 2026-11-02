@@ -379,6 +379,15 @@ async function runScraper() {
   const { standings: scrapedStandings, matches: scrapedMatches, currentRound: scrapedRound } = await scrapeIleague();
 
   if (scrapedStandings.length >= 15) {
+    const prevMap = new Map();
+    for (const oldS of (current.standings || [])) {
+      prevMap.set(oldS.team, oldS.prevRank || oldS.rank);
+    }
+    for (const s of scrapedStandings) {
+      if (s.prevRank === undefined) {
+        s.prevRank = prevMap.get(s.team) || s.rank;
+      }
+    }
     current.standings = scrapedStandings;
   }
 
