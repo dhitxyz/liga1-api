@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 9",
-  "lastUpdated": 1793895968057,
+  "lastUpdated": 1793917046054,
   "matches": [
     {
       "date": "Jumat, 6 Nov",
@@ -9,9 +9,9 @@
       "homeTeam": "PSIM Yogyakarta",
       "awayTeam": "Dewa United",
       "scoreOrTime": "16:30",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "16:30",
       "fixtureOrder": 10
     },
@@ -21,9 +21,9 @@
       "homeTeam": "Madura United",
       "awayTeam": "Arema FC",
       "scoreOrTime": "20:00",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "20:00",
       "fixtureOrder": 11
     },
