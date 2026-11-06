@@ -45,8 +45,8 @@ const TEAM_NAME_MAP = {
 const SORTED_TEAM_KEYS = Object.entries(TEAM_NAME_MAP).sort((a, b) => b[0].length - a[0].length);
 
 function log(tag, msg) {
-  const now = new Date(Date.now() + 7 * 3600 * 1000);
-  const timeStr = now.toISOString().replace('T', ' ').substring(0, 19) + ' WIB';
+  const now = new Date(Date.now() + 8 * 3600 * 1000);
+  const timeStr = now.toISOString().replace('T', ' ').substring(0, 19) + ' WITA';
   console.log(`[${timeStr}] [${tag}] ${msg}`);
 }
 
@@ -192,8 +192,8 @@ async function scrapeIleague(savedTimesMap) {
     const accHtml = endIdx !== -1 ? html.substring(accIdx, endIdx) : html.substring(accIdx, accIdx + 120000);
     const cards = accHtml.split(/<div class=["']card["']/);
     const now = Date.now();
-    const nowWib = new Date(now + 7 * 3600 * 1000);
-    const todayIso = nowWib.toISOString().substring(0, 10);
+    const nowWita = new Date(now + 8 * 3600 * 1000);
+    const todayIso = nowWita.toISOString().substring(0, 10);
 
     for (const c of cards.slice(1)) {
       const titles = Array.from(c.matchAll(/<img[^>]*title=["']([^"']+)["']/g)).map((m) => m[1]);
@@ -310,8 +310,8 @@ async function scrapeFixturesRound(roundNum = 8) {
   if (!html) return [];
 
   const matches = [];
-  const nowWib = new Date(Date.now() + 7 * 3600 * 1000);
-  const todayIso = nowWib.toISOString().substring(0, 10);
+  const nowWita = new Date(Date.now() + 8 * 3600 * 1000);
+  const todayIso = nowWita.toISOString().substring(0, 10);
 
   const sections = html.split(/<div align=["']left["'][^>]*class=["']col-md-12["']>/);
   for (const sec of sections.slice(1)) {
@@ -403,8 +403,8 @@ async function syncToGithub(jsonContent) {
 function getPollingState(data) {
   const matches = data.matches || [];
   const now = Date.now();
-  const nowWib = new Date(now + 7 * 3600 * 1000);
-  const todayWibIso = nowWib.toISOString().substring(0, 10);
+  const nowWita = new Date(now + 8 * 3600 * 1000);
+  const todayWitaIso = nowWita.toISOString().substring(0, 10);
 
   let hasLive = false;
   let hasKickoffSoon = false;
@@ -412,7 +412,7 @@ function getPollingState(data) {
   let minTimeToKickoff = Infinity;
 
   for (const m of matches) {
-    const isToday = (m.isoDate === todayWibIso);
+    const isToday = (m.isoDate === todayWitaIso);
 
     // 1. Explicit LIVE status
     if (m.status && m.status.toUpperCase() === 'LIVE') {
