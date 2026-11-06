@@ -255,8 +255,7 @@ async function scrapeIleague(savedTimesMap) {
                     if (/GO+L!+/i.test(text)) {
                       const minM = text.match(/(\d+)'/);
                       const min = minM ? minM[1] : '';
-                      const playerM = text.match(/(?:GO+L!+\s*)([\w\s.]+?)(?:\s+mencetak|\s*$)/i);
-                      const player = playerM ? playerM[1].trim() : text;
+                      const player = text.replace(/^\d+'\s*/, '').replace(/GO+L!+\s*/i, '').replace(/\s*mencetak.*$/i, '').trim();
                       const key = `${min}_${player}`;
                       if (isAway) {
                         awayGoals.add(key);
