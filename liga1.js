@@ -91,6 +91,7 @@ function isMatchTime(str) {
 
 function getMatchKickoffMs(isoDate, timeStr) {
   if (!isoDate || !timeStr) return null;
+  const isWib = timeStr.toLowerCase().includes('wib');
   const clean = timeStr.replace(/[^\d:]/g, '');
   const parts = clean.split(':');
   if (parts.length < 2) return null;
@@ -99,8 +100,9 @@ function getMatchKickoffMs(isoDate, timeStr) {
   if (isNaN(h) || isNaN(m)) return null;
 
   const [year, month, day] = isoDate.split('-').map((x) => parseInt(x, 10));
-  // In data.json, scheduled times are stored in WITA (UTC+8): UTC hour is h - 8
-  return Date.UTC(year, month - 1, day, h - 8, m, 0);
+  // If explicitly WIB, UTC is h - 7. Otherwise default is WITA (data.json standard), UTC is h - 8.
+  const utcOffset = isWib ? 7 : 8;
+  return Date.UTC(year, month - 1, day, h - utcOffset, m, 0);
 }
 
 function formatDateId(dateStr) {
@@ -407,6 +409,7 @@ function getPollingState(data) {
   let hasLive = false;
   let hasKickoffSoon = false;
   let hasPendingToday = false;
+  let minTimeToKickoff = Infinity;
 
   for (const m of matches) {
     const isToday = (m.isoDate === todayWibIso);
@@ -423,6 +426,11 @@ function getPollingState(data) {
 
       if (!m.isFinished && m.status !== 'FT') {
         if (kickoffMs) {
+          const timeToKickoff = kickoffMs - now;
+          if (timeToKickoff > 0 && timeToKickoff < minTimeToKickoff) {
+            minTimeToKickoff = timeToKickoff;
+          }
+
           // Playing window: 5 min before kickoff until 135 min after kickoff
           if (now >= kickoffMs - 5 * 60 * 1000 && now <= kickoffMs + 135 * 60 * 1000) {
             hasLive = true;
@@ -440,7 +448,13 @@ function getPollingState(data) {
 
   if (hasLive) return { delay: FAST_POLL_MS, label: 'LIVE 60s' };
   if (hasKickoffSoon) return { delay: 2 * 60 * 1000, label: 'PRE-MATCH 2m' };
-  if (hasPendingToday) return { delay: PRE_MATCH_POLL_MS, label: 'PRE-MATCH 15m' };
+  if (hasPendingToday) {
+    if (minTimeToKickoff <= 2 * 3600 * 1000) {
+      return { delay: PRE_MATCH_POLL_MS, label: 'PRE-MATCH 15m' };
+    }
+    const safeDelay = Math.min(IDLE_POLL_MS, Math.max(PRE_MATCH_POLL_MS, minTimeToKickoff - 2 * 3600 * 1000));
+    return { delay: safeDelay, label: `PRE-MATCH ${Math.round(safeDelay / 60000)}m` };
+  }
   return { delay: IDLE_POLL_MS, label: 'IDLE 2 Jam' };
 }
 
@@ -458,10 +472,15 @@ async function runScraper() {
 
   const { standings: scrapedStandings, matches: scrapedMatches, currentRound: scrapedRound } = await scrapeIleague(savedTimesMap);
 
+  const oldRound = current.round;
+  const roundNum = scrapedRound || 9;
+  current.round = `Pekan ${roundNum}`;
+  const isNewRound = Boolean(oldRound && oldRound !== current.round);
+
   if (scrapedStandings.length >= 15) {
     const prevMap = new Map();
     for (const oldS of (current.standings || [])) {
-      prevMap.set(oldS.team, oldS.prevRank || oldS.rank);
+      prevMap.set(oldS.team, isNewRound ? oldS.rank : (oldS.prevRank || oldS.rank));
     }
     for (const s of scrapedStandings) {
       if (s.prevRank === undefined) {
@@ -470,9 +489,6 @@ async function runScraper() {
     }
     current.standings = scrapedStandings;
   }
-
-  const roundNum = scrapedRound || 9;
-  current.round = `Pekan ${roundNum}`;
   const currentRoundMatches = await scrapeFixturesRound(roundNum);
   const nextRoundMatches = await scrapeFixturesRound(roundNum + 1);
 
