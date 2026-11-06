@@ -137,7 +137,7 @@ async function fetchHtml(url) {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/120.0.0.0',
         'Accept': 'text/html,application/xhtml+xml',
       },
-      signal: AbortSignal.timeout(12000),
+      signal: AbortSignal.timeout(15000),
     });
     if (res.ok) return await res.text();
   } catch (e) {
@@ -175,7 +175,7 @@ async function scrapeStandings() {
   return standings;
 }
 
-async function scrapeIleague() {
+async function scrapeIleague(savedTimesMap) {
   const html = await fetchHtml('https://ileague.id/');
   if (!html) return { standings: [], matches: [] };
 
@@ -202,23 +202,38 @@ async function scrapeIleague() {
       if (titles.length >= 2) {
         const home = cleanTeamName(titles[0]);
         const away = cleanTeamName(titles[1]);
+        const matchKey = `${home}_${away}`;
         const matchDateIso = linkM ? linkM[1] : todayIso;
+        const isToday = (matchDateIso === todayIso);
         const rawScore = scoreM ? scoreM[1].replace(/<[^>]+>/g, '').trim() : '';
+        const hasLiveId = /id=["']live_\d+["']/i.test(c);
 
+        let matchKickoffTime = (savedTimesMap && savedTimesMap.get(matchKey)) || undefined;
         let isFinished = false;
         let scoreOrTime = '';
         let status = '';
-        let matchKickoffTime;
+
+        let kickoffMs = null;
+        let elapsedMinutes = 999;
+        if (matchKickoffTime) {
+          kickoffMs = getMatchKickoffMs(matchDateIso, matchKickoffTime);
+          if (kickoffMs) elapsedMinutes = (now - kickoffMs) / (60 * 1000);
+        }
 
         if (!isMatchTime(rawScore) && rawScore.includes(':')) {
           scoreOrTime = rawScore.replace(':', ' - ').trim();
+
+          // If score has started and it's within match window or has live ID, default to LIVE
+          if (hasLiveId || (isToday && elapsedMinutes < 100)) {
+            status = 'LIVE';
+            isFinished = false;
+          }
 
           // Check detail page for FT vs LIVE, live score, and kickoff time
           if (detailLinkM) {
             try {
               const detailHtml = await fetchHtml(detailLinkM[1]);
               if (detailHtml) {
-                const isFT = />\s*FT\s*<\/div>/i.test(detailHtml) || />\s*Full\s*Time\s*<\/div>/i.test(detailHtml);
                 const liveScoreM = detailHtml.match(/id=["']live_score["'][^>]*>([\s\S]*?)<\/span>/i);
                 if (liveScoreM && liveScoreM[1].includes(':')) {
                   scoreOrTime = liveScoreM[1].replace(':', ' - ').trim();
@@ -227,29 +242,43 @@ async function scrapeIleague() {
                 const kickOffM = detailHtml.match(/Kick\s*Off\s*<b>([0-2]?\d:[0-5]\d)\s*(?:WIB)?<\/b>/i);
                 if (kickOffM) {
                   matchKickoffTime = wibToWita(kickOffM[1]);
+                  kickoffMs = getMatchKickoffMs(matchDateIso, matchKickoffTime);
+                  if (kickoffMs) elapsedMinutes = (now - kickoffMs) / (60 * 1000);
                 }
 
-                if (isFT) {
+                const isFT = />\s*FT\s*<\/div>/i.test(detailHtml) || />\s*Full\s*Time\s*<\/div>/i.test(detailHtml);
+
+                // A match can ONLY be FT if at least 95 minutes have passed since kickoff!
+                if (isFT && elapsedMinutes >= 95) {
                   isFinished = true;
                   status = 'FT';
-                } else {
+                } else if (hasLiveId || (isToday && elapsedMinutes < 100)) {
                   isFinished = false;
                   status = 'LIVE';
+                } else if (elapsedMinutes >= 135) {
+                  isFinished = true;
+                  status = 'FT';
                 }
               }
             } catch (e) {}
           }
 
+          // Safe fallback: never assume FT if match is within playing window or has live ID
           if (!status) {
-            status = 'FT';
-            isFinished = true;
+            if (hasLiveId || (isToday && elapsedMinutes < 100)) {
+              status = 'LIVE';
+              isFinished = false;
+            } else {
+              status = 'FT';
+              isFinished = true;
+            }
           }
         } else {
           isFinished = false;
           const timeClean = rawScore.match(/([0-2]?\d:[0-5]\d)/);
           scoreOrTime = wibToWita(timeClean ? timeClean[1] : '19:00');
           matchKickoffTime = scoreOrTime;
-          status = matchDateIso === todayIso ? 'Hari Ini' : '';
+          status = isToday ? 'Hari Ini' : '';
         }
 
         matches.push({
@@ -260,7 +289,7 @@ async function scrapeIleague() {
           scoreOrTime,
           status,
           isFinished,
-          isToday: matchDateIso === todayIso,
+          isToday,
           time: matchKickoffTime || (scoreOrTime && !scoreOrTime.includes('-') ? scoreOrTime : undefined),
         });
       }
@@ -427,7 +456,7 @@ async function runScraper() {
     }
   }
 
-  const { standings: scrapedStandings, matches: scrapedMatches, currentRound: scrapedRound } = await scrapeIleague();
+  const { standings: scrapedStandings, matches: scrapedMatches, currentRound: scrapedRound } = await scrapeIleague(savedTimesMap);
 
   if (scrapedStandings.length >= 15) {
     const prevMap = new Map();

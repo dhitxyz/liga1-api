@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 9",
-  "lastUpdated": 1793967567940,
+  "lastUpdated": 1793968461017,
   "matches": [
     {
       "date": "Jumat, 6 Nov",
@@ -21,8 +21,8 @@
       "homeTeam": "Madura United",
       "awayTeam": "Arema FC",
       "scoreOrTime": "0 - 0",
-      "status": "FT",
-      "isFinished": true,
+      "status": "LIVE",
+      "isFinished": false,
       "isToday": true,
       "time": "20:00",
       "fixtureOrder": 11
