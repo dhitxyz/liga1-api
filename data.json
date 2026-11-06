@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 9",
-  "lastUpdated": 1793980397147,
+  "lastUpdated": 1793980865501,
   "matches": [
     {
       "date": "Jumat, 6 Nov",
@@ -11,7 +11,7 @@
       "scoreOrTime": "1 - 2",
       "status": "FT",
       "isFinished": true,
-      "isToday": true,
+      "isToday": false,
       "time": "16:30",
       "fixtureOrder": 10
     },
@@ -23,7 +23,7 @@
       "scoreOrTime": "4 - 0",
       "status": "FT",
       "isFinished": true,
-      "isToday": true,
+      "isToday": false,
       "time": "20:00",
       "fixtureOrder": 11
     },
@@ -33,9 +33,9 @@
       "homeTeam": "Borneo FC",
       "awayTeam": "PSM Makassar",
       "scoreOrTime": "16:30",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "16:30",
       "fixtureOrder": 12
     },
@@ -45,9 +45,9 @@
       "homeTeam": "Persita",
       "awayTeam": "Isenmulang Kalteng",
       "scoreOrTime": "20:00",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "20:00",
       "fixtureOrder": 13
     },
@@ -57,9 +57,9 @@
       "homeTeam": "Persijap Jepara",
       "awayTeam": "Garudayaksa FC",
       "scoreOrTime": "20:00",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "20:00",
       "fixtureOrder": 14
     },
@@ -69,9 +69,9 @@
       "homeTeam": "Persija Jakarta",
       "awayTeam": "Persebaya",
       "scoreOrTime": "20:00",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "20:00",
       "fixtureOrder": 15
     },
