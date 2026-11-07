@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 9",
-  "lastUpdated": 1794063137853,
+  "lastUpdated": 1794068163468,
   "matches": [
     {
       "date": "Jumat, 6 Nov",
@@ -35,7 +35,7 @@
       "scoreOrTime": "2 - 1",
       "status": "FT",
       "isFinished": true,
-      "isToday": true,
+      "isToday": false,
       "time": "16:30",
       "fixtureOrder": 12
     },
@@ -47,7 +47,7 @@
       "scoreOrTime": "0 - 1",
       "status": "FT",
       "isFinished": true,
-      "isToday": true,
+      "isToday": false,
       "time": "20:00",
       "fixtureOrder": 13
     },
@@ -59,7 +59,7 @@
       "scoreOrTime": "1 - 2",
       "status": "FT",
       "isFinished": true,
-      "isToday": true,
+      "isToday": false,
       "time": "20:00",
       "fixtureOrder": 14
     },
@@ -71,7 +71,7 @@
       "scoreOrTime": "2 - 0",
       "status": "FT",
       "isFinished": true,
-      "isToday": true,
+      "isToday": false,
       "time": "20:00",
       "fixtureOrder": 15
     },
@@ -81,9 +81,9 @@
       "homeTeam": "PSS Sleman",
       "awayTeam": "Bhayangkara FC",
       "scoreOrTime": "16:30",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "16:30",
       "fixtureOrder": 16
     },
@@ -93,9 +93,9 @@
       "homeTeam": "Bali United",
       "awayTeam": "Persik Kediri",
       "scoreOrTime": "16:30",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "16:30",
       "fixtureOrder": 17
     },
@@ -105,9 +105,9 @@
       "homeTeam": "Java United",
       "awayTeam": "Persib Bandung",
       "scoreOrTime": "20:00",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "20:00",
       "fixtureOrder": 18
     },
