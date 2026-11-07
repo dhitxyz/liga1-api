@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 9",
-  "lastUpdated": 1794031142230,
+  "lastUpdated": 1794040238520,
   "matches": [
     {
       "date": "Jumat, 6 Nov",
@@ -32,8 +32,8 @@
       "isoDate": "2026-11-07",
       "homeTeam": "Borneo FC",
       "awayTeam": "PSM Makassar",
-      "scoreOrTime": "16:30",
-      "status": "Hari Ini",
+      "scoreOrTime": "0 - 0",
+      "status": "LIVE",
       "isFinished": false,
       "isToday": true,
       "time": "16:30",
