@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 9",
-  "lastUpdated": 1794047239629,
+  "lastUpdated": 1794047303607,
   "matches": [
     {
       "date": "Jumat, 6 Nov",
@@ -20,7 +20,7 @@
       "isoDate": "2026-11-06",
       "homeTeam": "Madura United",
       "awayTeam": "Arema FC",
-      "scoreOrTime": "3 - 0",
+      "scoreOrTime": "4 - 0",
       "status": "FT",
       "isFinished": true,
       "isToday": false,
@@ -32,8 +32,8 @@
       "isoDate": "2026-11-07",
       "homeTeam": "Borneo FC",
       "awayTeam": "PSM Makassar",
-      "scoreOrTime": "16:30",
-      "status": "Hari Ini",
+      "scoreOrTime": "2 - 1",
+      "status": "LIVE",
       "isFinished": false,
       "isToday": true,
       "time": "16:30",
