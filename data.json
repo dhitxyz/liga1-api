@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 9",
-  "lastUpdated": 1794059953514,
+  "lastUpdated": 1794060957740,
   "matches": [
     {
       "date": "Jumat, 6 Nov",
@@ -69,8 +69,8 @@
       "homeTeam": "Persija Jakarta",
       "awayTeam": "Persebaya",
       "scoreOrTime": "2 - 0",
-      "status": "LIVE",
-      "isFinished": false,
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "20:00",
       "fixtureOrder": 15
@@ -223,6 +223,17 @@
   "standings": [
     {
       "rank": 1,
+      "team": "Persija Jakarta",
+      "played": 9,
+      "won": 7,
+      "draw": 0,
+      "lost": 2,
+      "goalDiff": 11,
+      "points": 21,
+      "prevRank": 1
+    },
+    {
+      "rank": 2,
       "team": "Dewa United",
       "played": 9,
       "won": 6,
@@ -233,7 +244,7 @@
       "prevRank": 3
     },
     {
-      "rank": 2,
+      "rank": 3,
       "team": "Madura United",
       "played": 9,
       "won": 6,
@@ -242,17 +253,6 @@
       "goalDiff": 6,
       "points": 19,
       "prevRank": 4
-    },
-    {
-      "rank": 3,
-      "team": "Persija Jakarta",
-      "played": 8,
-      "won": 6,
-      "draw": 0,
-      "lost": 2,
-      "goalDiff": 10,
-      "points": 18,
-      "prevRank": 1
     },
     {
       "rank": 4,
@@ -290,11 +290,11 @@
     {
       "rank": 7,
       "team": "Persebaya",
-      "played": 8,
+      "played": 9,
       "won": 3,
       "draw": 4,
-      "lost": 1,
-      "goalDiff": 3,
+      "lost": 2,
+      "goalDiff": 2,
       "points": 13,
       "prevRank": 7
     },
