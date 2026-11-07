@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 9",
-  "lastUpdated": 1794059445488,
+  "lastUpdated": 1794059890388,
   "matches": [
     {
       "date": "Jumat, 6 Nov",
@@ -20,7 +20,7 @@
       "isoDate": "2026-11-06",
       "homeTeam": "Madura United",
       "awayTeam": "Arema FC",
-      "scoreOrTime": "4 - 0",
+      "scoreOrTime": "3 - 0",
       "status": "FT",
       "isFinished": true,
       "isToday": false,
@@ -45,8 +45,8 @@
       "homeTeam": "Persita",
       "awayTeam": "Isenmulang Kalteng",
       "scoreOrTime": "0 - 1",
-      "status": "LIVE",
-      "isFinished": false,
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "20:00",
       "fixtureOrder": 13
@@ -57,8 +57,8 @@
       "homeTeam": "Persijap Jepara",
       "awayTeam": "Garudayaksa FC",
       "scoreOrTime": "1 - 2",
-      "status": "LIVE",
-      "isFinished": false,
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "20:00",
       "fixtureOrder": 14
@@ -279,11 +279,11 @@
     {
       "rank": 6,
       "team": "Persita",
-      "played": 7,
+      "played": 8,
       "won": 4,
       "draw": 3,
-      "lost": 0,
-      "goalDiff": 7,
+      "lost": 1,
+      "goalDiff": 6,
       "points": 15,
       "prevRank": 5
     },
@@ -311,6 +311,17 @@
     },
     {
       "rank": 9,
+      "team": "Garudayaksa FC",
+      "played": 9,
+      "won": 3,
+      "draw": 2,
+      "lost": 4,
+      "goalDiff": -4,
+      "points": 11,
+      "prevRank": 14
+    },
+    {
+      "rank": 10,
       "team": "Java United",
       "played": 8,
       "won": 3,
@@ -321,7 +332,7 @@
       "prevRank": 9
     },
     {
-      "rank": 10,
+      "rank": 11,
       "team": "Persik Kediri",
       "played": 8,
       "won": 3,
@@ -332,7 +343,7 @@
       "prevRank": 10
     },
     {
-      "rank": 11,
+      "rank": 12,
       "team": "Borneo FC",
       "played": 8,
       "won": 3,
@@ -343,7 +354,7 @@
       "prevRank": 12
     },
     {
-      "rank": 12,
+      "rank": 13,
       "team": "PSM Makassar",
       "played": 9,
       "won": 2,
@@ -354,7 +365,7 @@
       "prevRank": 13
     },
     {
-      "rank": 13,
+      "rank": 14,
       "team": "Arema FC",
       "played": 9,
       "won": 2,
@@ -365,18 +376,18 @@
       "prevRank": 11
     },
     {
-      "rank": 14,
-      "team": "Garudayaksa FC",
-      "played": 8,
+      "rank": 15,
+      "team": "Isenmulang Kalteng",
+      "played": 9,
       "won": 2,
       "draw": 2,
-      "lost": 4,
-      "goalDiff": -5,
-      "points": 8,
-      "prevRank": 14
+      "lost": 5,
+      "goalDiff": -12,
+      "points": 6,
+      "prevRank": 17
     },
     {
-      "rank": 15,
+      "rank": 16,
       "team": "PSIM Yogyakarta",
       "played": 9,
       "won": 1,
@@ -387,7 +398,7 @@
       "prevRank": 15
     },
     {
-      "rank": 16,
+      "rank": 17,
       "team": "PSS Sleman",
       "played": 8,
       "won": 1,
@@ -398,24 +409,13 @@
       "prevRank": 16
     },
     {
-      "rank": 17,
-      "team": "Isenmulang Kalteng",
-      "played": 8,
-      "won": 1,
-      "draw": 2,
-      "lost": 5,
-      "goalDiff": -13,
-      "points": 3,
-      "prevRank": 17
-    },
-    {
       "rank": 18,
       "team": "Persijap Jepara",
-      "played": 8,
+      "played": 9,
       "won": 0,
       "draw": 2,
-      "lost": 6,
-      "goalDiff": -12,
+      "lost": 7,
+      "goalDiff": -13,
       "points": 2,
       "prevRank": 18
     }
