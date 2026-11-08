@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 9",
-  "lastUpdated": 1794144283507,
+  "lastUpdated": 1794144541345,
   "matches": [
     {
       "date": "Jumat, 6 Nov",
@@ -104,7 +104,7 @@
       "isoDate": "2026-11-08",
       "homeTeam": "Java United",
       "awayTeam": "Persib Bandung",
-      "scoreOrTime": "2 - 0",
+      "scoreOrTime": "2 - 1",
       "status": "LIVE",
       "isFinished": false,
       "isToday": true,
