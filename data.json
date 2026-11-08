@@ -1,116 +1,8 @@
 {
   "season": "2026/2027",
-  "round": "Pekan 9",
-  "lastUpdated": 1794150421283,
+  "round": "Pekan 10",
+  "lastUpdated": 1794158839431,
   "matches": [
-    {
-      "date": "Jumat, 6 Nov",
-      "isoDate": "2026-11-06",
-      "homeTeam": "PSIM Yogyakarta",
-      "awayTeam": "Dewa United",
-      "scoreOrTime": "1 - 2",
-      "status": "FT",
-      "isFinished": true,
-      "isToday": false,
-      "time": "16:30",
-      "fixtureOrder": 10
-    },
-    {
-      "date": "Jumat, 6 Nov",
-      "isoDate": "2026-11-06",
-      "homeTeam": "Madura United",
-      "awayTeam": "Arema FC",
-      "scoreOrTime": "3 - 0",
-      "status": "FT",
-      "isFinished": true,
-      "isToday": false,
-      "time": "20:00",
-      "fixtureOrder": 11
-    },
-    {
-      "date": "Sabtu, 7 Nov",
-      "isoDate": "2026-11-07",
-      "homeTeam": "Borneo FC",
-      "awayTeam": "PSM Makassar",
-      "scoreOrTime": "1 - 1",
-      "status": "FT",
-      "isFinished": true,
-      "isToday": false,
-      "time": "16:30",
-      "fixtureOrder": 12
-    },
-    {
-      "date": "Sabtu, 7 Nov",
-      "isoDate": "2026-11-07",
-      "homeTeam": "Persita",
-      "awayTeam": "Isenmulang Kalteng",
-      "scoreOrTime": "0 - 1",
-      "status": "FT",
-      "isFinished": true,
-      "isToday": false,
-      "time": "20:00",
-      "fixtureOrder": 13
-    },
-    {
-      "date": "Sabtu, 7 Nov",
-      "isoDate": "2026-11-07",
-      "homeTeam": "Persijap Jepara",
-      "awayTeam": "Garudayaksa FC",
-      "scoreOrTime": "1 - 2",
-      "status": "FT",
-      "isFinished": true,
-      "isToday": false,
-      "time": "20:00",
-      "fixtureOrder": 14
-    },
-    {
-      "date": "Sabtu, 7 Nov",
-      "isoDate": "2026-11-07",
-      "homeTeam": "Persija Jakarta",
-      "awayTeam": "Persebaya",
-      "scoreOrTime": "1 - 0",
-      "status": "FT",
-      "isFinished": true,
-      "isToday": false,
-      "time": "20:00",
-      "fixtureOrder": 15
-    },
-    {
-      "date": "Minggu, 8 Nov",
-      "isoDate": "2026-11-08",
-      "homeTeam": "PSS Sleman",
-      "awayTeam": "Bhayangkara FC",
-      "scoreOrTime": "1 - 1",
-      "status": "FT",
-      "isFinished": true,
-      "isToday": true,
-      "time": "16:30",
-      "fixtureOrder": 16
-    },
-    {
-      "date": "Minggu, 8 Nov",
-      "isoDate": "2026-11-08",
-      "homeTeam": "Bali United",
-      "awayTeam": "Persik Kediri",
-      "scoreOrTime": "3 - 0",
-      "status": "FT",
-      "isFinished": true,
-      "isToday": true,
-      "time": "16:30",
-      "fixtureOrder": 17
-    },
-    {
-      "date": "Minggu, 8 Nov",
-      "isoDate": "2026-11-08",
-      "homeTeam": "Java United",
-      "awayTeam": "Persib Bandung",
-      "scoreOrTime": "2 - 1",
-      "status": "FT",
-      "isFinished": true,
-      "isToday": true,
-      "time": "20:00",
-      "fixtureOrder": 18
-    },
     {
       "date": "Jumat, 20 Nov",
       "isoDate": "2026-11-20",
@@ -121,7 +13,7 @@
       "isFinished": false,
       "isToday": false,
       "time": "16:30",
-      "fixtureOrder": 1
+      "fixtureOrder": 11
     },
     {
       "date": "Jumat, 20 Nov",
@@ -133,7 +25,7 @@
       "isFinished": false,
       "isToday": false,
       "time": "16:30",
-      "fixtureOrder": 2
+      "fixtureOrder": 12
     },
     {
       "date": "Jumat, 20 Nov",
@@ -145,7 +37,7 @@
       "isFinished": false,
       "isToday": false,
       "time": "20:00",
-      "fixtureOrder": 3
+      "fixtureOrder": 13
     },
     {
       "date": "Sabtu, 21 Nov",
@@ -157,7 +49,7 @@
       "isFinished": false,
       "isToday": false,
       "time": "16:30",
-      "fixtureOrder": 4
+      "fixtureOrder": 14
     },
     {
       "date": "Sabtu, 21 Nov",
@@ -169,7 +61,7 @@
       "isFinished": false,
       "isToday": false,
       "time": "16:30",
-      "fixtureOrder": 5
+      "fixtureOrder": 15
     },
     {
       "date": "Sabtu, 21 Nov",
@@ -181,7 +73,7 @@
       "isFinished": false,
       "isToday": false,
       "time": "20:00",
-      "fixtureOrder": 6
+      "fixtureOrder": 16
     },
     {
       "date": "Sabtu, 21 Nov",
@@ -193,7 +85,7 @@
       "isFinished": false,
       "isToday": false,
       "time": "20:00",
-      "fixtureOrder": 7
+      "fixtureOrder": 17
     },
     {
       "date": "Minggu, 22 Nov",
@@ -205,7 +97,7 @@
       "isFinished": false,
       "isToday": false,
       "time": "16:30",
-      "fixtureOrder": 8
+      "fixtureOrder": 18
     },
     {
       "date": "Minggu, 22 Nov",
@@ -217,7 +109,127 @@
       "isFinished": false,
       "isToday": false,
       "time": "20:00",
+      "fixtureOrder": 19
+    },
+    {
+      "date": "Kamis, 26 Nov",
+      "isoDate": "2026-11-26",
+      "homeTeam": "Borneo FC",
+      "awayTeam": "Persita",
+      "scoreOrTime": "16:30",
+      "status": "",
+      "isFinished": false,
+      "isToday": false,
+      "time": "16:30",
+      "fixtureOrder": 1
+    },
+    {
+      "date": "Sabtu, 28 Nov",
+      "isoDate": "2026-11-28",
+      "homeTeam": "Isenmulang Kalteng",
+      "awayTeam": "PSS Sleman",
+      "scoreOrTime": "16:30",
+      "status": "",
+      "isFinished": false,
+      "isToday": false,
+      "time": "16:30",
+      "fixtureOrder": 2
+    },
+    {
+      "date": "Sabtu, 28 Nov",
+      "isoDate": "2026-11-28",
+      "homeTeam": "PSM Makassar",
+      "awayTeam": "Dewa United",
+      "scoreOrTime": "16:30",
+      "status": "",
+      "isFinished": false,
+      "isToday": false,
+      "time": "16:30",
+      "fixtureOrder": 3
+    },
+    {
+      "date": "Sabtu, 28 Nov",
+      "isoDate": "2026-11-28",
+      "homeTeam": "PSIM Yogyakarta",
+      "awayTeam": "Persijap Jepara",
+      "scoreOrTime": "16:30",
+      "status": "",
+      "isFinished": false,
+      "isToday": false,
+      "time": "16:30",
+      "fixtureOrder": 4
+    },
+    {
+      "date": "Sabtu, 28 Nov",
+      "isoDate": "2026-11-28",
+      "homeTeam": "Bali United",
+      "awayTeam": "Bhayangkara FC",
+      "scoreOrTime": "16:30",
+      "status": "",
+      "isFinished": false,
+      "isToday": false,
+      "time": "16:30",
+      "fixtureOrder": 5
+    },
+    {
+      "date": "Sabtu, 28 Nov",
+      "isoDate": "2026-11-28",
+      "homeTeam": "Persija Jakarta",
+      "awayTeam": "Garudayaksa FC",
+      "scoreOrTime": "20:00",
+      "status": "",
+      "isFinished": false,
+      "isToday": false,
+      "time": "20:00",
+      "fixtureOrder": 6
+    },
+    {
+      "date": "Sabtu, 28 Nov",
+      "isoDate": "2026-11-28",
+      "homeTeam": "Madura United",
+      "awayTeam": "Java United",
+      "scoreOrTime": "20:00",
+      "status": "",
+      "isFinished": false,
+      "isToday": false,
+      "time": "20:00",
+      "fixtureOrder": 7
+    },
+    {
+      "date": "Minggu, 29 Nov",
+      "isoDate": "2026-11-29",
+      "homeTeam": "Arema FC",
+      "awayTeam": "Persebaya",
+      "scoreOrTime": "16:30",
+      "status": "",
+      "isFinished": false,
+      "isToday": false,
+      "time": "16:30",
+      "fixtureOrder": 8
+    },
+    {
+      "date": "Minggu, 29 Nov",
+      "isoDate": "2026-11-29",
+      "homeTeam": "Borneo FC",
+      "awayTeam": "Persik Kediri",
+      "scoreOrTime": "20:00",
+      "status": "",
+      "isFinished": false,
+      "isToday": false,
+      "time": "20:00",
       "fixtureOrder": 9
+    },
+    {
+      "date": "Minggu, 29 Nov",
+      "isoDate": "2026-11-29",
+      "homeTeam": "Persita",
+      "awayTeam": "Persib Bandung",
+      "scoreOrTime": "20:00",
+      "status": "",
+      "isFinished": false,
+      "isToday": false,
+      "time": "20:00",
+      "fixtureOrder": 10
     }
   ],
   "standings": [
@@ -241,7 +253,7 @@
       "lost": 1,
       "goalDiff": 4,
       "points": 20,
-      "prevRank": 3
+      "prevRank": 2
     },
     {
       "rank": 3,
@@ -252,7 +264,7 @@
       "lost": 2,
       "goalDiff": 17,
       "points": 19,
-      "prevRank": 2
+      "prevRank": 3
     },
     {
       "rank": 4,
@@ -274,7 +286,7 @@
       "lost": 3,
       "goalDiff": 6,
       "points": 16,
-      "prevRank": 6
+      "prevRank": 5
     },
     {
       "rank": 6,
@@ -285,7 +297,7 @@
       "lost": 1,
       "goalDiff": 6,
       "points": 15,
-      "prevRank": 5
+      "prevRank": 6
     },
     {
       "rank": 7,
@@ -296,7 +308,7 @@
       "lost": 2,
       "goalDiff": 3,
       "points": 13,
-      "prevRank": 9
+      "prevRank": 7
     },
     {
       "rank": 8,
@@ -307,7 +319,7 @@
       "lost": 2,
       "goalDiff": 2,
       "points": 13,
-      "prevRank": 7
+      "prevRank": 8
     },
     {
       "rank": 9,
@@ -318,7 +330,7 @@
       "lost": 1,
       "goalDiff": 1,
       "points": 12,
-      "prevRank": 8
+      "prevRank": 9
     },
     {
       "rank": 10,
@@ -329,7 +341,7 @@
       "lost": 4,
       "goalDiff": -4,
       "points": 11,
-      "prevRank": 14
+      "prevRank": 10
     },
     {
       "rank": 11,
@@ -340,7 +352,7 @@
       "lost": 4,
       "goalDiff": -2,
       "points": 10,
-      "prevRank": 12
+      "prevRank": 11
     },
     {
       "rank": 12,
@@ -351,7 +363,7 @@
       "lost": 3,
       "goalDiff": -4,
       "points": 10,
-      "prevRank": 13
+      "prevRank": 12
     },
     {
       "rank": 13,
@@ -362,7 +374,7 @@
       "lost": 5,
       "goalDiff": -5,
       "points": 10,
-      "prevRank": 10
+      "prevRank": 13
     },
     {
       "rank": 14,
@@ -373,7 +385,7 @@
       "lost": 4,
       "goalDiff": -3,
       "points": 9,
-      "prevRank": 11
+      "prevRank": 14
     },
     {
       "rank": 15,
@@ -384,7 +396,7 @@
       "lost": 5,
       "goalDiff": -12,
       "points": 6,
-      "prevRank": 17
+      "prevRank": 15
     },
     {
       "rank": 16,
@@ -406,7 +418,7 @@
       "lost": 6,
       "goalDiff": -8,
       "points": 5,
-      "prevRank": 15
+      "prevRank": 17
     },
     {
       "rank": 18,
