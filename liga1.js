@@ -240,40 +240,7 @@ async function scrapeIleague(savedTimesMap) {
                 if (liveScoreM && liveScoreM[1].includes(':')) {
                   scoreOrTime = liveScoreM[1].replace(':', ' - ').trim();
                 }
-
-                // Parse live timeline events for instant goal updates (often posted before header updates!)
-                const timelineIdx = detailHtml.indexOf('id="live_timeline"');
-                if (timelineIdx !== -1) {
-                  const timelineHtml = detailHtml.substring(timelineIdx, timelineIdx + 50000);
-                  const goalRegex = /<div class=["']alert alert-[^"']*col-lg-8([^"']*)["'][^>]*>([\s\S]*?)<\/div>/gi;
-                  let m;
-                  const homeGoals = new Set();
-                  const awayGoals = new Set();
-                  while ((m = goalRegex.exec(timelineHtml)) !== null) {
-                    const isAway = m[1].includes('offset-lg-2');
-                    const text = m[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-                    if (/GO+L!+/i.test(text)) {
-                      const minM = text.match(/(\d+)'/);
-                      const min = minM ? minM[1] : '';
-                      const player = text.replace(/^\d+'\s*/, '').replace(/GO+L!+\s*/i, '').replace(/\s*mencetak.*$/i, '').trim();
-                      const key = `${min}_${player}`;
-                      if (isAway) {
-                        awayGoals.add(key);
-                      } else {
-                        homeGoals.add(key);
-                      }
-                    }
-                  }
-
-                  const timelineTotal = homeGoals.size + awayGoals.size;
-                  const headerTotal = scoreOrTime.includes('-')
-                    ? scoreOrTime.split('-').reduce((sum, n) => sum + (parseInt(n.trim(), 10) || 0), 0)
-                    : 0;
-
-                  if (timelineTotal > headerTotal) {
-                    scoreOrTime = `${homeGoals.size} - ${awayGoals.size}`;
-                  }
-                }
+                const officialHeaderScore = scoreOrTime;
 
                 const kickOffM = detailHtml.match(/Kick\s*Off\s*<b>([0-2]?\d:[0-5]\d)\s*(?:WIB)?<\/b>/i);
                 if (kickOffM) {
@@ -288,12 +255,50 @@ async function scrapeIleague(savedTimesMap) {
                 if (isFT && elapsedMinutes >= 95) {
                   isFinished = true;
                   status = 'FT';
+                  scoreOrTime = officialHeaderScore;
                 } else if (hasLiveId || (isToday && elapsedMinutes < 100)) {
                   isFinished = false;
                   status = 'LIVE';
                 } else if (elapsedMinutes >= 135) {
                   isFinished = true;
                   status = 'FT';
+                  scoreOrTime = officialHeaderScore;
+                }
+
+                // Parse live timeline events ONLY when match is actively LIVE (never when finished/FT!)
+                if (status === 'LIVE') {
+                  const timelineIdx = detailHtml.indexOf('id="live_timeline"');
+                  if (timelineIdx !== -1) {
+                    const timelineHtml = detailHtml.substring(timelineIdx, timelineIdx + 50000);
+                    const goalRegex = /<div class=["']alert alert-[^"']*col-lg-8([^"']*)["'][^>]*>([\s\S]*?)<\/div>/gi;
+                    let m;
+                    const homeGoals = [];
+                    const awayGoals = [];
+                    while ((m = goalRegex.exec(timelineHtml)) !== null) {
+                      const isAway = m[1].includes('offset-lg-2');
+                      const text = m[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+                      if (/GO+L!+/i.test(text)) {
+                        const minM = text.match(/(\d+)'/);
+                        const min = minM ? parseInt(minM[1], 10) : 0;
+                        const player = text.replace(/^\d+'\s*/, '').replace(/GO+L!+\s*/i, '').replace(/\s*mencetak.*$/i, '').trim();
+                        const teamList = isAway ? awayGoals : homeGoals;
+                        // Deduplicate: same player within 2 minutes is an operator duplicate/correction
+                        const isDup = teamList.some((g) => g.player === player && Math.abs(g.min - min) <= 2);
+                        if (!isDup) {
+                          teamList.push({ min, player });
+                        }
+                      }
+                    }
+
+                    const timelineTotal = homeGoals.length + awayGoals.length;
+                    const headerTotal = officialHeaderScore.includes('-')
+                      ? officialHeaderScore.split('-').reduce((sum, n) => sum + (parseInt(n.trim(), 10) || 0), 0)
+                      : 0;
+
+                    if (timelineTotal > headerTotal) {
+                      scoreOrTime = `${homeGoals.length} - ${awayGoals.length}`;
+                    }
+                  }
                 }
               }
             } catch (e) {}
