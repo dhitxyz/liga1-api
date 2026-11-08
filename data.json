@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 9",
-  "lastUpdated": 1794134734657,
+  "lastUpdated": 1794135643355,
   "matches": [
     {
       "date": "Jumat, 6 Nov",
@@ -301,12 +301,12 @@
     {
       "rank": 8,
       "team": "Bhayangkara FC",
-      "played": 8,
+      "played": 9,
       "won": 2,
-      "draw": 5,
+      "draw": 6,
       "lost": 1,
       "goalDiff": 1,
-      "points": 11,
+      "points": 12,
       "prevRank": 8
     },
     {
@@ -388,6 +388,17 @@
     },
     {
       "rank": 16,
+      "team": "PSS Sleman",
+      "played": 9,
+      "won": 1,
+      "draw": 2,
+      "lost": 6,
+      "goalDiff": -5,
+      "points": 5,
+      "prevRank": 16
+    },
+    {
+      "rank": 17,
       "team": "PSIM Yogyakarta",
       "played": 9,
       "won": 1,
@@ -396,17 +407,6 @@
       "goalDiff": -8,
       "points": 5,
       "prevRank": 15
-    },
-    {
-      "rank": 17,
-      "team": "PSS Sleman",
-      "played": 8,
-      "won": 1,
-      "draw": 1,
-      "lost": 6,
-      "goalDiff": -5,
-      "points": 4,
-      "prevRank": 16
     },
     {
       "rank": 18,
