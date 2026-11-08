@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 9",
-  "lastUpdated": 1794133989581,
+  "lastUpdated": 1794134734657,
   "matches": [
     {
       "date": "Jumat, 6 Nov",
@@ -81,8 +81,8 @@
       "homeTeam": "PSS Sleman",
       "awayTeam": "Bhayangkara FC",
       "scoreOrTime": "1 - 1",
-      "status": "LIVE",
-      "isFinished": false,
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "16:30",
       "fixtureOrder": 16
