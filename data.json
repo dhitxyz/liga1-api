@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 9",
-  "lastUpdated": 1794118581987,
+  "lastUpdated": 1794126628425,
   "matches": [
     {
       "date": "Jumat, 6 Nov",
@@ -80,8 +80,8 @@
       "isoDate": "2026-11-08",
       "homeTeam": "PSS Sleman",
       "awayTeam": "Bhayangkara FC",
-      "scoreOrTime": "16:30",
-      "status": "Hari Ini",
+      "scoreOrTime": "0 - 0",
+      "status": "LIVE",
       "isFinished": false,
       "isToday": true,
       "time": "16:30",
@@ -92,8 +92,8 @@
       "isoDate": "2026-11-08",
       "homeTeam": "Bali United",
       "awayTeam": "Persik Kediri",
-      "scoreOrTime": "16:30",
-      "status": "Hari Ini",
+      "scoreOrTime": "0 - 0",
+      "status": "LIVE",
       "isFinished": false,
       "isToday": true,
       "time": "16:30",
