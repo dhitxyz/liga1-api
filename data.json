@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 9",
-  "lastUpdated": 1794146261454,
+  "lastUpdated": 1794149673754,
   "matches": [
     {
       "date": "Jumat, 6 Nov",
@@ -268,11 +268,11 @@
     {
       "rank": 5,
       "team": "Persib Bandung",
-      "played": 8,
+      "played": 9,
       "won": 5,
       "draw": 1,
-      "lost": 2,
-      "goalDiff": 7,
+      "lost": 3,
+      "goalDiff": 6,
       "points": 16,
       "prevRank": 6
     },
@@ -289,6 +289,17 @@
     },
     {
       "rank": 7,
+      "team": "Java United",
+      "played": 9,
+      "won": 4,
+      "draw": 3,
+      "lost": 2,
+      "goalDiff": 3,
+      "points": 13,
+      "prevRank": 9
+    },
+    {
+      "rank": 8,
       "team": "Persebaya",
       "played": 9,
       "won": 3,
@@ -299,7 +310,7 @@
       "prevRank": 7
     },
     {
-      "rank": 8,
+      "rank": 9,
       "team": "Bhayangkara FC",
       "played": 9,
       "won": 2,
@@ -310,7 +321,7 @@
       "prevRank": 8
     },
     {
-      "rank": 9,
+      "rank": 10,
       "team": "Garudayaksa FC",
       "played": 9,
       "won": 3,
@@ -319,17 +330,6 @@
       "goalDiff": -4,
       "points": 11,
       "prevRank": 14
-    },
-    {
-      "rank": 10,
-      "team": "Java United",
-      "played": 8,
-      "won": 3,
-      "draw": 3,
-      "lost": 2,
-      "goalDiff": 2,
-      "points": 10,
-      "prevRank": 9
     },
     {
       "rank": 11,
