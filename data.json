@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 9",
-  "lastUpdated": 1794140377716,
+  "lastUpdated": 1794142506659,
   "matches": [
     {
       "date": "Jumat, 6 Nov",
@@ -42,9 +42,9 @@
     {
       "date": "Sabtu, 7 Nov",
       "isoDate": "2026-11-07",
-      "homeTeam": "Persita",
-      "awayTeam": "Isenmulang Kalteng",
-      "scoreOrTime": "0 - 1",
+      "homeTeam": "Persijap Jepara",
+      "awayTeam": "Garudayaksa FC",
+      "scoreOrTime": "1 - 2",
       "status": "FT",
       "isFinished": true,
       "isToday": false,
@@ -54,9 +54,9 @@
     {
       "date": "Sabtu, 7 Nov",
       "isoDate": "2026-11-07",
-      "homeTeam": "Persijap Jepara",
-      "awayTeam": "Garudayaksa FC",
-      "scoreOrTime": "1 - 2",
+      "homeTeam": "Persita",
+      "awayTeam": "Isenmulang Kalteng",
+      "scoreOrTime": "0 - 1",
       "status": "FT",
       "isFinished": true,
       "isToday": false,
