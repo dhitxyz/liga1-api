@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 9",
-  "lastUpdated": 1794133487592,
+  "lastUpdated": 1794133678494,
   "matches": [
     {
       "date": "Jumat, 6 Nov",
@@ -93,8 +93,8 @@
       "homeTeam": "Bali United",
       "awayTeam": "Persik Kediri",
       "scoreOrTime": "3 - 0",
-      "status": "LIVE",
-      "isFinished": false,
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "16:30",
       "fixtureOrder": 17
@@ -245,6 +245,17 @@
     },
     {
       "rank": 3,
+      "team": "Bali United",
+      "played": 9,
+      "won": 6,
+      "draw": 1,
+      "lost": 2,
+      "goalDiff": 17,
+      "points": 19,
+      "prevRank": 2
+    },
+    {
+      "rank": 4,
       "team": "Madura United",
       "played": 9,
       "won": 6,
@@ -253,17 +264,6 @@
       "goalDiff": 6,
       "points": 19,
       "prevRank": 4
-    },
-    {
-      "rank": 4,
-      "team": "Bali United",
-      "played": 8,
-      "won": 5,
-      "draw": 1,
-      "lost": 2,
-      "goalDiff": 14,
-      "points": 16,
-      "prevRank": 2
     },
     {
       "rank": 5,
@@ -333,17 +333,6 @@
     },
     {
       "rank": 11,
-      "team": "Persik Kediri",
-      "played": 8,
-      "won": 3,
-      "draw": 1,
-      "lost": 4,
-      "goalDiff": -2,
-      "points": 10,
-      "prevRank": 10
-    },
-    {
-      "rank": 12,
       "team": "Borneo FC",
       "played": 8,
       "won": 3,
@@ -354,7 +343,7 @@
       "prevRank": 12
     },
     {
-      "rank": 13,
+      "rank": 12,
       "team": "PSM Makassar",
       "played": 9,
       "won": 2,
@@ -363,6 +352,17 @@
       "goalDiff": -4,
       "points": 10,
       "prevRank": 13
+    },
+    {
+      "rank": 13,
+      "team": "Persik Kediri",
+      "played": 9,
+      "won": 3,
+      "draw": 1,
+      "lost": 5,
+      "goalDiff": -5,
+      "points": 10,
+      "prevRank": 10
     },
     {
       "rank": 14,
