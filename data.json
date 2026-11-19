@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 10",
-  "lastUpdated": 1795098152389,
+  "lastUpdated": 1795108797525,
   "matches": [
     {
       "date": "Jumat, 20 Nov",
@@ -9,9 +9,9 @@
       "homeTeam": "Garudayaksa FC",
       "awayTeam": "Madura United",
       "scoreOrTime": "16:30",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "16:30",
       "fixtureOrder": 11
     },
@@ -21,9 +21,9 @@
       "homeTeam": "PSS Sleman",
       "awayTeam": "Arema FC",
       "scoreOrTime": "16:30",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "16:30",
       "fixtureOrder": 12
     },
@@ -33,9 +33,9 @@
       "homeTeam": "Dewa United",
       "awayTeam": "Persita",
       "scoreOrTime": "20:00",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "20:00",
       "fixtureOrder": 13
     },
