@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 10",
-  "lastUpdated": 1795183076497,
+  "lastUpdated": 1795193732007,
   "matches": [
     {
       "date": "Jumat, 20 Nov",
@@ -11,7 +11,7 @@
       "scoreOrTime": "1 - 0",
       "status": "FT",
       "isFinished": true,
-      "isToday": true,
+      "isToday": false,
       "time": "16:30",
       "fixtureOrder": 11
     },
@@ -23,7 +23,7 @@
       "scoreOrTime": "0 - 3",
       "status": "FT",
       "isFinished": true,
-      "isToday": true,
+      "isToday": false,
       "time": "16:30",
       "fixtureOrder": 12
     },
@@ -33,9 +33,9 @@
       "homeTeam": "Dewa United",
       "awayTeam": "Persita",
       "scoreOrTime": "0 - 1",
-      "status": "LIVE",
-      "isFinished": false,
-      "isToday": true,
+      "status": "FT",
+      "isFinished": true,
+      "isToday": false,
       "time": "20:00",
       "fixtureOrder": 13
     },
@@ -45,9 +45,9 @@
       "homeTeam": "Persik Kediri",
       "awayTeam": "PSIM Yogyakarta",
       "scoreOrTime": "16:30",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "16:30",
       "fixtureOrder": 14
     },
@@ -57,9 +57,9 @@
       "homeTeam": "Persebaya",
       "awayTeam": "Java United",
       "scoreOrTime": "16:30",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "16:30",
       "fixtureOrder": 15
     },
@@ -69,9 +69,9 @@
       "homeTeam": "PSM Makassar",
       "awayTeam": "Persija Jakarta",
       "scoreOrTime": "20:00",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "20:00",
       "fixtureOrder": 16
     },
@@ -81,9 +81,9 @@
       "homeTeam": "Bhayangkara FC",
       "awayTeam": "Persijap Jepara",
       "scoreOrTime": "20:00",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "20:00",
       "fixtureOrder": 17
     },
@@ -247,11 +247,11 @@
     {
       "rank": 2,
       "team": "Dewa United",
-      "played": 9,
+      "played": 10,
       "won": 6,
       "draw": 2,
-      "lost": 1,
-      "goalDiff": 4,
+      "lost": 2,
+      "goalDiff": 3,
       "points": 20,
       "prevRank": 2
     },
@@ -279,6 +279,17 @@
     },
     {
       "rank": 5,
+      "team": "Persita",
+      "played": 9,
+      "won": 5,
+      "draw": 3,
+      "lost": 1,
+      "goalDiff": 7,
+      "points": 18,
+      "prevRank": 6
+    },
+    {
+      "rank": 6,
       "team": "Persib Bandung",
       "played": 9,
       "won": 5,
@@ -287,17 +298,6 @@
       "goalDiff": 6,
       "points": 16,
       "prevRank": 5
-    },
-    {
-      "rank": 6,
-      "team": "Persita",
-      "played": 8,
-      "won": 4,
-      "draw": 3,
-      "lost": 1,
-      "goalDiff": 6,
-      "points": 15,
-      "prevRank": 6
     },
     {
       "rank": 7,
