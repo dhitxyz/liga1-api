@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 10",
-  "lastUpdated": 1795267542960,
+  "lastUpdated": 1795277188818,
   "matches": [
     {
       "date": "Jumat, 20 Nov",
@@ -47,7 +47,7 @@
       "scoreOrTime": "2 - 2",
       "status": "FT",
       "isFinished": true,
-      "isToday": true,
+      "isToday": false,
       "time": "16:30",
       "fixtureOrder": 14
     },
@@ -59,7 +59,7 @@
       "scoreOrTime": "1 - 1",
       "status": "FT",
       "isFinished": true,
-      "isToday": true,
+      "isToday": false,
       "time": "16:30",
       "fixtureOrder": 15
     },
@@ -68,10 +68,10 @@
       "isoDate": "2026-11-21",
       "homeTeam": "PSM Makassar",
       "awayTeam": "Persija Jakarta",
-      "scoreOrTime": "0 - 1",
-      "status": "LIVE",
-      "isFinished": false,
-      "isToday": true,
+      "scoreOrTime": "1 - 1",
+      "status": "FT",
+      "isFinished": true,
+      "isToday": false,
       "time": "20:00",
       "fixtureOrder": 16
     },
@@ -81,9 +81,9 @@
       "homeTeam": "Bhayangkara FC",
       "awayTeam": "Persijap Jepara",
       "scoreOrTime": "1 - 0",
-      "status": "LIVE",
-      "isFinished": false,
-      "isToday": true,
+      "status": "FT",
+      "isFinished": true,
+      "isToday": false,
       "time": "20:00",
       "fixtureOrder": 17
     },
@@ -93,9 +93,9 @@
       "homeTeam": "Isenmulang Kalteng",
       "awayTeam": "Borneo FC",
       "scoreOrTime": "16:30",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "16:30",
       "fixtureOrder": 18
     },
@@ -105,9 +105,9 @@
       "homeTeam": "Persib Bandung",
       "awayTeam": "Bali United",
       "scoreOrTime": "20:00",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "20:00",
       "fixtureOrder": 19
     },
@@ -210,20 +210,20 @@
     {
       "date": "Minggu, 29 Nov",
       "isoDate": "2026-11-29",
-      "homeTeam": "Borneo FC",
-      "awayTeam": "Persik Kediri",
-      "scoreOrTime": "20:00",
+      "homeTeam": "Persita",
+      "awayTeam": "Persib Bandung",
+      "scoreOrTime": "16:30",
       "status": "",
       "isFinished": false,
       "isToday": false,
-      "time": "20:00",
+      "time": "16:30",
       "fixtureOrder": 9
     },
     {
       "date": "Minggu, 29 Nov",
       "isoDate": "2026-11-29",
-      "homeTeam": "Persita",
-      "awayTeam": "Persib Bandung",
+      "homeTeam": "Borneo FC",
+      "awayTeam": "Persik Kediri",
       "scoreOrTime": "20:00",
       "status": "",
       "isFinished": false,
@@ -236,12 +236,12 @@
     {
       "rank": 1,
       "team": "Persija Jakarta",
-      "played": 9,
+      "played": 10,
       "won": 7,
-      "draw": 0,
+      "draw": 1,
       "lost": 2,
       "goalDiff": 11,
-      "points": 21,
+      "points": 22,
       "prevRank": 1
     },
     {
@@ -301,6 +301,17 @@
     },
     {
       "rank": 7,
+      "team": "Bhayangkara FC",
+      "played": 10,
+      "won": 3,
+      "draw": 6,
+      "lost": 1,
+      "goalDiff": 2,
+      "points": 15,
+      "prevRank": 9
+    },
+    {
+      "rank": 8,
       "team": "Java United",
       "played": 10,
       "won": 4,
@@ -311,7 +322,7 @@
       "prevRank": 7
     },
     {
-      "rank": 8,
+      "rank": 9,
       "team": "Persebaya",
       "played": 10,
       "won": 3,
@@ -322,7 +333,7 @@
       "prevRank": 8
     },
     {
-      "rank": 9,
+      "rank": 10,
       "team": "Garudayaksa FC",
       "played": 10,
       "won": 4,
@@ -331,17 +342,6 @@
       "goalDiff": -3,
       "points": 14,
       "prevRank": 10
-    },
-    {
-      "rank": 10,
-      "team": "Bhayangkara FC",
-      "played": 9,
-      "won": 2,
-      "draw": 6,
-      "lost": 1,
-      "goalDiff": 1,
-      "points": 12,
-      "prevRank": 9
     },
     {
       "rank": 11,
@@ -356,6 +356,17 @@
     },
     {
       "rank": 12,
+      "team": "PSM Makassar",
+      "played": 10,
+      "won": 2,
+      "draw": 5,
+      "lost": 3,
+      "goalDiff": -4,
+      "points": 11,
+      "prevRank": 12
+    },
+    {
+      "rank": 13,
       "team": "Persik Kediri",
       "played": 10,
       "won": 3,
@@ -366,7 +377,7 @@
       "prevRank": 13
     },
     {
-      "rank": 13,
+      "rank": 14,
       "team": "Borneo FC",
       "played": 8,
       "won": 3,
@@ -375,17 +386,6 @@
       "goalDiff": -2,
       "points": 10,
       "prevRank": 11
-    },
-    {
-      "rank": 14,
-      "team": "PSM Makassar",
-      "played": 9,
-      "won": 2,
-      "draw": 4,
-      "lost": 3,
-      "goalDiff": -4,
-      "points": 10,
-      "prevRank": 12
     },
     {
       "rank": 15,
@@ -423,11 +423,11 @@
     {
       "rank": 18,
       "team": "Persijap Jepara",
-      "played": 9,
+      "played": 10,
       "won": 0,
       "draw": 2,
-      "lost": 7,
-      "goalDiff": -13,
+      "lost": 8,
+      "goalDiff": -14,
       "points": 2,
       "prevRank": 18
     }
