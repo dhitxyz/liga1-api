@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 10",
-  "lastUpdated": 1795244978289,
+  "lastUpdated": 1795267542960,
   "matches": [
     {
       "date": "Jumat, 20 Nov",
@@ -44,9 +44,9 @@
       "isoDate": "2026-11-21",
       "homeTeam": "Persik Kediri",
       "awayTeam": "PSIM Yogyakarta",
-      "scoreOrTime": "16:30",
-      "status": "Hari Ini",
-      "isFinished": false,
+      "scoreOrTime": "2 - 2",
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "16:30",
       "fixtureOrder": 14
@@ -56,9 +56,9 @@
       "isoDate": "2026-11-21",
       "homeTeam": "Persebaya",
       "awayTeam": "Java United",
-      "scoreOrTime": "16:30",
-      "status": "Hari Ini",
-      "isFinished": false,
+      "scoreOrTime": "1 - 1",
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "16:30",
       "fixtureOrder": 15
@@ -68,8 +68,8 @@
       "isoDate": "2026-11-21",
       "homeTeam": "PSM Makassar",
       "awayTeam": "Persija Jakarta",
-      "scoreOrTime": "20:00",
-      "status": "Hari Ini",
+      "scoreOrTime": "0 - 1",
+      "status": "LIVE",
       "isFinished": false,
       "isToday": true,
       "time": "20:00",
@@ -80,8 +80,8 @@
       "isoDate": "2026-11-21",
       "homeTeam": "Bhayangkara FC",
       "awayTeam": "Persijap Jepara",
-      "scoreOrTime": "20:00",
-      "status": "Hari Ini",
+      "scoreOrTime": "1 - 0",
+      "status": "LIVE",
       "isFinished": false,
       "isToday": true,
       "time": "20:00",
@@ -301,6 +301,28 @@
     },
     {
       "rank": 7,
+      "team": "Java United",
+      "played": 10,
+      "won": 4,
+      "draw": 4,
+      "lost": 2,
+      "goalDiff": 3,
+      "points": 14,
+      "prevRank": 7
+    },
+    {
+      "rank": 8,
+      "team": "Persebaya",
+      "played": 10,
+      "won": 3,
+      "draw": 5,
+      "lost": 2,
+      "goalDiff": 2,
+      "points": 14,
+      "prevRank": 8
+    },
+    {
+      "rank": 9,
       "team": "Garudayaksa FC",
       "played": 10,
       "won": 4,
@@ -309,28 +331,6 @@
       "goalDiff": -3,
       "points": 14,
       "prevRank": 10
-    },
-    {
-      "rank": 8,
-      "team": "Java United",
-      "played": 9,
-      "won": 4,
-      "draw": 3,
-      "lost": 2,
-      "goalDiff": 3,
-      "points": 13,
-      "prevRank": 7
-    },
-    {
-      "rank": 9,
-      "team": "Persebaya",
-      "played": 9,
-      "won": 3,
-      "draw": 4,
-      "lost": 2,
-      "goalDiff": 2,
-      "points": 13,
-      "prevRank": 8
     },
     {
       "rank": 10,
@@ -356,6 +356,17 @@
     },
     {
       "rank": 12,
+      "team": "Persik Kediri",
+      "played": 10,
+      "won": 3,
+      "draw": 2,
+      "lost": 5,
+      "goalDiff": -5,
+      "points": 11,
+      "prevRank": 13
+    },
+    {
+      "rank": 13,
       "team": "Borneo FC",
       "played": 8,
       "won": 3,
@@ -366,7 +377,7 @@
       "prevRank": 11
     },
     {
-      "rank": 13,
+      "rank": 14,
       "team": "PSM Makassar",
       "played": 9,
       "won": 2,
@@ -377,18 +388,18 @@
       "prevRank": 12
     },
     {
-      "rank": 14,
-      "team": "Persik Kediri",
-      "played": 9,
-      "won": 3,
-      "draw": 1,
-      "lost": 5,
-      "goalDiff": -5,
-      "points": 10,
-      "prevRank": 13
+      "rank": 15,
+      "team": "PSIM Yogyakarta",
+      "played": 10,
+      "won": 1,
+      "draw": 3,
+      "lost": 6,
+      "goalDiff": -8,
+      "points": 6,
+      "prevRank": 17
     },
     {
-      "rank": 15,
+      "rank": 16,
       "team": "Isenmulang Kalteng",
       "played": 9,
       "won": 2,
@@ -399,7 +410,7 @@
       "prevRank": 15
     },
     {
-      "rank": 16,
+      "rank": 17,
       "team": "PSS Sleman",
       "played": 10,
       "won": 1,
@@ -408,17 +419,6 @@
       "goalDiff": -8,
       "points": 5,
       "prevRank": 16
-    },
-    {
-      "rank": 17,
-      "team": "PSIM Yogyakarta",
-      "played": 9,
-      "won": 1,
-      "draw": 2,
-      "lost": 6,
-      "goalDiff": -8,
-      "points": 5,
-      "prevRank": 17
     },
     {
       "rank": 18,
