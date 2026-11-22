@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 10",
-  "lastUpdated": 1795353455222,
+  "lastUpdated": 1795364020884,
   "matches": [
     {
       "date": "Jumat, 20 Nov",
@@ -95,7 +95,7 @@
       "scoreOrTime": "0 - 0",
       "status": "FT",
       "isFinished": true,
-      "isToday": true,
+      "isToday": false,
       "time": "16:30",
       "fixtureOrder": 18
     },
@@ -104,10 +104,10 @@
       "isoDate": "2026-11-22",
       "homeTeam": "Persib Bandung",
       "awayTeam": "Bali United",
-      "scoreOrTime": "0 - 0",
-      "status": "LIVE",
-      "isFinished": false,
-      "isToday": true,
+      "scoreOrTime": "2 - 1",
+      "status": "FT",
+      "isFinished": true,
+      "isToday": false,
       "time": "20:00",
       "fixtureOrder": 19
     },
@@ -258,16 +258,27 @@
     {
       "rank": 3,
       "team": "Bali United",
-      "played": 9,
+      "played": 10,
       "won": 6,
       "draw": 1,
-      "lost": 2,
-      "goalDiff": 17,
+      "lost": 3,
+      "goalDiff": 16,
       "points": 19,
       "prevRank": 3
     },
     {
       "rank": 4,
+      "team": "Persib Bandung",
+      "played": 10,
+      "won": 6,
+      "draw": 1,
+      "lost": 3,
+      "goalDiff": 7,
+      "points": 19,
+      "prevRank": 5
+    },
+    {
+      "rank": 5,
       "team": "Madura United",
       "played": 10,
       "won": 6,
@@ -278,7 +289,7 @@
       "prevRank": 4
     },
     {
-      "rank": 5,
+      "rank": 6,
       "team": "Persita",
       "played": 9,
       "won": 5,
@@ -287,17 +298,6 @@
       "goalDiff": 7,
       "points": 18,
       "prevRank": 6
-    },
-    {
-      "rank": 6,
-      "team": "Persib Bandung",
-      "played": 9,
-      "won": 5,
-      "draw": 1,
-      "lost": 3,
-      "goalDiff": 6,
-      "points": 16,
-      "prevRank": 5
     },
     {
       "rank": 7,
