@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 11",
-  "lastUpdated": 1795620706481,
+  "lastUpdated": 1795631862445,
   "matches": [
     {
       "date": "Kamis, 26 Nov",
@@ -9,9 +9,9 @@
       "homeTeam": "Borneo FC",
       "awayTeam": "Persita",
       "scoreOrTime": "16:30",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "16:30",
       "fixtureOrder": 10
     },
