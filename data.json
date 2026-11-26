@@ -1,16 +1,16 @@
 {
   "season": "2026/2027",
   "round": "Pekan 11",
-  "lastUpdated": 1795681125062,
+  "lastUpdated": 1795705589978,
   "matches": [
     {
       "date": "Kamis, 26 Nov",
       "isoDate": "2026-11-26",
       "homeTeam": "Borneo FC",
       "awayTeam": "Persita",
-      "scoreOrTime": "16:30",
-      "status": "Hari Ini",
-      "isFinished": false,
+      "scoreOrTime": "2 - 3",
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "16:30",
       "fixtureOrder": 10
@@ -246,6 +246,17 @@
     },
     {
       "rank": 2,
+      "team": "Persita",
+      "played": 10,
+      "won": 6,
+      "draw": 3,
+      "lost": 1,
+      "goalDiff": 8,
+      "points": 21,
+      "prevRank": 6
+    },
+    {
+      "rank": 3,
       "team": "Dewa United",
       "played": 10,
       "won": 6,
@@ -256,7 +267,7 @@
       "prevRank": 2
     },
     {
-      "rank": 3,
+      "rank": 4,
       "team": "Bali United",
       "played": 10,
       "won": 6,
@@ -267,7 +278,7 @@
       "prevRank": 3
     },
     {
-      "rank": 4,
+      "rank": 5,
       "team": "Persib Bandung",
       "played": 10,
       "won": 6,
@@ -278,7 +289,7 @@
       "prevRank": 4
     },
     {
-      "rank": 5,
+      "rank": 6,
       "team": "Madura United",
       "played": 10,
       "won": 6,
@@ -287,17 +298,6 @@
       "goalDiff": 5,
       "points": 19,
       "prevRank": 5
-    },
-    {
-      "rank": 6,
-      "team": "Persita",
-      "played": 9,
-      "won": 5,
-      "draw": 3,
-      "lost": 1,
-      "goalDiff": 7,
-      "points": 18,
-      "prevRank": 6
     },
     {
       "rank": 7,
@@ -357,11 +357,11 @@
     {
       "rank": 12,
       "team": "Borneo FC",
-      "played": 9,
+      "played": 10,
       "won": 3,
       "draw": 2,
-      "lost": 4,
-      "goalDiff": -2,
+      "lost": 5,
+      "goalDiff": -3,
       "points": 11,
       "prevRank": 12
     },
