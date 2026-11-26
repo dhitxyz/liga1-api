@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 11",
-  "lastUpdated": 1795705589978,
+  "lastUpdated": 1795717399808,
   "matches": [
     {
       "date": "Kamis, 26 Nov",
@@ -11,7 +11,7 @@
       "scoreOrTime": "2 - 3",
       "status": "FT",
       "isFinished": true,
-      "isToday": true,
+      "isToday": false,
       "time": "16:30",
       "fixtureOrder": 10
     },
