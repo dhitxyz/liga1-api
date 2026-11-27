@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
-  "round": "Pekan 9",
-  "lastUpdated": 1795791556565,
+  "round": "Pekan 11",
+  "lastUpdated": 1795802915776,
   "matches": [
     {
       "date": "Kamis, 26 Nov",
@@ -21,9 +21,9 @@
       "homeTeam": "Isenmulang Kalteng",
       "awayTeam": "PSS Sleman",
       "scoreOrTime": "16:30",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "16:30",
       "fixtureOrder": 11
     },
@@ -33,9 +33,9 @@
       "homeTeam": "PSM Makassar",
       "awayTeam": "Dewa United",
       "scoreOrTime": "16:30",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "16:30",
       "fixtureOrder": 12
     },
@@ -45,9 +45,9 @@
       "homeTeam": "PSIM Yogyakarta",
       "awayTeam": "Persijap Jepara",
       "scoreOrTime": "16:30",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "16:30",
       "fixtureOrder": 13
     },
@@ -57,9 +57,9 @@
       "homeTeam": "Bali United",
       "awayTeam": "Bhayangkara FC",
       "scoreOrTime": "16:30",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "16:30",
       "fixtureOrder": 14
     },
@@ -69,9 +69,9 @@
       "homeTeam": "Persija Jakarta",
       "awayTeam": "Garudayaksa FC",
       "scoreOrTime": "20:00",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "20:00",
       "fixtureOrder": 15
     },
@@ -81,9 +81,9 @@
       "homeTeam": "Madura United",
       "awayTeam": "Java United",
       "scoreOrTime": "20:00",
-      "status": "",
+      "status": "Hari Ini",
       "isFinished": false,
-      "isToday": false,
+      "isToday": true,
       "time": "20:00",
       "fixtureOrder": 16
     },
@@ -253,7 +253,7 @@
       "lost": 1,
       "goalDiff": 8,
       "points": 21,
-      "prevRank": 6
+      "prevRank": 2
     },
     {
       "rank": 3,
@@ -264,7 +264,7 @@
       "lost": 2,
       "goalDiff": 3,
       "points": 20,
-      "prevRank": 2
+      "prevRank": 3
     },
     {
       "rank": 4,
@@ -275,7 +275,7 @@
       "lost": 3,
       "goalDiff": 16,
       "points": 19,
-      "prevRank": 3
+      "prevRank": 4
     },
     {
       "rank": 5,
@@ -286,7 +286,7 @@
       "lost": 3,
       "goalDiff": 7,
       "points": 19,
-      "prevRank": 4
+      "prevRank": 5
     },
     {
       "rank": 6,
@@ -297,7 +297,7 @@
       "lost": 3,
       "goalDiff": 5,
       "points": 19,
-      "prevRank": 5
+      "prevRank": 6
     },
     {
       "rank": 7,
