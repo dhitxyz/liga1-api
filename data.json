@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 11",
-  "lastUpdated": 1795852225551,
+  "lastUpdated": 1795868983518,
   "matches": [
     {
       "date": "Kamis, 26 Nov",
@@ -20,9 +20,9 @@
       "isoDate": "2026-11-28",
       "homeTeam": "Isenmulang Kalteng",
       "awayTeam": "PSS Sleman",
-      "scoreOrTime": "16:30",
-      "status": "Hari Ini",
-      "isFinished": false,
+      "scoreOrTime": "4 - 2",
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "16:30",
       "fixtureOrder": 11
@@ -32,9 +32,9 @@
       "isoDate": "2026-11-28",
       "homeTeam": "PSM Makassar",
       "awayTeam": "Dewa United",
-      "scoreOrTime": "16:30",
-      "status": "Hari Ini",
-      "isFinished": false,
+      "scoreOrTime": "0 - 3",
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "16:30",
       "fixtureOrder": 12
@@ -44,9 +44,9 @@
       "isoDate": "2026-11-28",
       "homeTeam": "PSIM Yogyakarta",
       "awayTeam": "Persijap Jepara",
-      "scoreOrTime": "16:30",
-      "status": "Hari Ini",
-      "isFinished": false,
+      "scoreOrTime": "2 - 1",
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "16:30",
       "fixtureOrder": 13
@@ -56,9 +56,9 @@
       "isoDate": "2026-11-28",
       "homeTeam": "Bali United",
       "awayTeam": "Bhayangkara FC",
-      "scoreOrTime": "16:30",
-      "status": "Hari Ini",
-      "isFinished": false,
+      "scoreOrTime": "4 - 0",
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "16:30",
       "fixtureOrder": 14
@@ -68,8 +68,8 @@
       "isoDate": "2026-11-28",
       "homeTeam": "Persija Jakarta",
       "awayTeam": "Garudayaksa FC",
-      "scoreOrTime": "20:00",
-      "status": "Hari Ini",
+      "scoreOrTime": "1 - 0",
+      "status": "LIVE",
       "isFinished": false,
       "isToday": true,
       "time": "20:00",
@@ -80,8 +80,8 @@
       "isoDate": "2026-11-28",
       "homeTeam": "Madura United",
       "awayTeam": "Java United",
-      "scoreOrTime": "20:00",
-      "status": "Hari Ini",
+      "scoreOrTime": "1 - 0",
+      "status": "LIVE",
       "isFinished": false,
       "isToday": true,
       "time": "20:00",
@@ -235,6 +235,28 @@
   "standings": [
     {
       "rank": 1,
+      "team": "Dewa United",
+      "played": 11,
+      "won": 7,
+      "draw": 2,
+      "lost": 2,
+      "goalDiff": 6,
+      "points": 23,
+      "prevRank": 3
+    },
+    {
+      "rank": 2,
+      "team": "Bali United",
+      "played": 11,
+      "won": 7,
+      "draw": 1,
+      "lost": 3,
+      "goalDiff": 20,
+      "points": 22,
+      "prevRank": 4
+    },
+    {
+      "rank": 3,
       "team": "Persija Jakarta",
       "played": 10,
       "won": 7,
@@ -245,7 +267,7 @@
       "prevRank": 1
     },
     {
-      "rank": 2,
+      "rank": 4,
       "team": "Persita",
       "played": 10,
       "won": 6,
@@ -256,40 +278,7 @@
       "prevRank": 2
     },
     {
-      "rank": 3,
-      "team": "Dewa United",
-      "played": 10,
-      "won": 6,
-      "draw": 2,
-      "lost": 2,
-      "goalDiff": 3,
-      "points": 20,
-      "prevRank": 3
-    },
-    {
-      "rank": 4,
-      "team": "Bali United",
-      "played": 10,
-      "won": 6,
-      "draw": 1,
-      "lost": 3,
-      "goalDiff": 16,
-      "points": 19,
-      "prevRank": 4
-    },
-    {
       "rank": 5,
-      "team": "Persib Bandung",
-      "played": 10,
-      "won": 6,
-      "draw": 1,
-      "lost": 3,
-      "goalDiff": 7,
-      "points": 19,
-      "prevRank": 5
-    },
-    {
-      "rank": 6,
       "team": "Madura United",
       "played": 10,
       "won": 6,
@@ -300,13 +289,24 @@
       "prevRank": 6
     },
     {
+      "rank": 6,
+      "team": "Persib Bandung",
+      "played": 10,
+      "won": 6,
+      "draw": 1,
+      "lost": 3,
+      "goalDiff": 7,
+      "points": 19,
+      "prevRank": 5
+    },
+    {
       "rank": 7,
       "team": "Bhayangkara FC",
-      "played": 10,
+      "played": 11,
       "won": 3,
       "draw": 6,
-      "lost": 1,
-      "goalDiff": 2,
+      "lost": 2,
+      "goalDiff": -2,
       "points": 15,
       "prevRank": 7
     },
@@ -367,17 +367,6 @@
     },
     {
       "rank": 13,
-      "team": "PSM Makassar",
-      "played": 10,
-      "won": 2,
-      "draw": 5,
-      "lost": 3,
-      "goalDiff": -4,
-      "points": 11,
-      "prevRank": 13
-    },
-    {
-      "rank": 14,
       "team": "Persik Kediri",
       "played": 10,
       "won": 3,
@@ -388,46 +377,57 @@
       "prevRank": 14
     },
     {
+      "rank": 14,
+      "team": "PSM Makassar",
+      "played": 11,
+      "won": 2,
+      "draw": 5,
+      "lost": 4,
+      "goalDiff": -7,
+      "points": 11,
+      "prevRank": 13
+    },
+    {
       "rank": 15,
       "team": "Isenmulang Kalteng",
-      "played": 10,
-      "won": 2,
+      "played": 11,
+      "won": 3,
       "draw": 3,
       "lost": 5,
-      "goalDiff": -12,
-      "points": 7,
+      "goalDiff": -10,
+      "points": 10,
       "prevRank": 15
     },
     {
       "rank": 16,
       "team": "PSIM Yogyakarta",
-      "played": 10,
-      "won": 1,
+      "played": 11,
+      "won": 2,
       "draw": 3,
       "lost": 6,
-      "goalDiff": -8,
-      "points": 6,
+      "goalDiff": -7,
+      "points": 9,
       "prevRank": 16
     },
     {
       "rank": 17,
       "team": "PSS Sleman",
-      "played": 10,
+      "played": 11,
       "won": 1,
       "draw": 2,
-      "lost": 7,
-      "goalDiff": -8,
+      "lost": 8,
+      "goalDiff": -10,
       "points": 5,
       "prevRank": 17
     },
     {
       "rank": 18,
       "team": "Persijap Jepara",
-      "played": 10,
+      "played": 11,
       "won": 0,
       "draw": 2,
-      "lost": 8,
-      "goalDiff": -14,
+      "lost": 9,
+      "goalDiff": -15,
       "points": 2,
       "prevRank": 18
     }
