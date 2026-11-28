@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 11",
-  "lastUpdated": 1795874869739,
+  "lastUpdated": 1795881122099,
   "matches": [
     {
       "date": "Kamis, 26 Nov",
@@ -69,8 +69,8 @@
       "homeTeam": "Persija Jakarta",
       "awayTeam": "Garudayaksa FC",
       "scoreOrTime": "5 - 1",
-      "status": "LIVE",
-      "isFinished": false,
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "20:00",
       "fixtureOrder": 15
@@ -235,6 +235,17 @@
   "standings": [
     {
       "rank": 1,
+      "team": "Persija Jakarta",
+      "played": 11,
+      "won": 8,
+      "draw": 1,
+      "lost": 2,
+      "goalDiff": 15,
+      "points": 25,
+      "prevRank": 3
+    },
+    {
+      "rank": 2,
       "team": "Dewa United",
       "played": 11,
       "won": 7,
@@ -242,10 +253,10 @@
       "lost": 2,
       "goalDiff": 6,
       "points": 23,
-      "prevRank": 2
+      "prevRank": 1
     },
     {
-      "rank": 2,
+      "rank": 3,
       "team": "Bali United",
       "played": 11,
       "won": 7,
@@ -253,18 +264,7 @@
       "lost": 3,
       "goalDiff": 20,
       "points": 22,
-      "prevRank": 3
-    },
-    {
-      "rank": 3,
-      "team": "Persija Jakarta",
-      "played": 10,
-      "won": 7,
-      "draw": 1,
-      "lost": 2,
-      "goalDiff": 11,
-      "points": 22,
-      "prevRank": 1
+      "prevRank": 2
     },
     {
       "rank": 4,
@@ -275,7 +275,7 @@
       "lost": 1,
       "goalDiff": 8,
       "points": 21,
-      "prevRank": 6
+      "prevRank": 4
     },
     {
       "rank": 5,
@@ -297,7 +297,7 @@
       "lost": 3,
       "goalDiff": 7,
       "points": 19,
-      "prevRank": 4
+      "prevRank": 6
     },
     {
       "rank": 7,
@@ -335,11 +335,11 @@
     {
       "rank": 10,
       "team": "Garudayaksa FC",
-      "played": 10,
+      "played": 11,
       "won": 4,
       "draw": 2,
-      "lost": 4,
-      "goalDiff": -3,
+      "lost": 5,
+      "goalDiff": -7,
       "points": 14,
       "prevRank": 10
     },
@@ -374,7 +374,7 @@
       "lost": 5,
       "goalDiff": -5,
       "points": 11,
-      "prevRank": 14
+      "prevRank": 13
     },
     {
       "rank": 14,
@@ -385,7 +385,7 @@
       "lost": 4,
       "goalDiff": -7,
       "points": 11,
-      "prevRank": 13
+      "prevRank": 14
     },
     {
       "rank": 15,
