@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 11",
-  "lastUpdated": 1795873450981,
+  "lastUpdated": 1795874869739,
   "matches": [
     {
       "date": "Kamis, 26 Nov",
@@ -81,8 +81,8 @@
       "homeTeam": "Madura United",
       "awayTeam": "Java United",
       "scoreOrTime": "2 - 2",
-      "status": "LIVE",
-      "isFinished": false,
+      "status": "FT",
+      "isFinished": true,
       "isToday": true,
       "time": "20:00",
       "fixtureOrder": 16
@@ -280,12 +280,12 @@
     {
       "rank": 5,
       "team": "Madura United",
-      "played": 10,
+      "played": 11,
       "won": 6,
-      "draw": 1,
+      "draw": 2,
       "lost": 3,
       "goalDiff": 5,
-      "points": 19,
+      "points": 20,
       "prevRank": 5
     },
     {
@@ -301,6 +301,17 @@
     },
     {
       "rank": 7,
+      "team": "Java United",
+      "played": 11,
+      "won": 4,
+      "draw": 5,
+      "lost": 2,
+      "goalDiff": 3,
+      "points": 15,
+      "prevRank": 8
+    },
+    {
+      "rank": 8,
       "team": "Bhayangkara FC",
       "played": 11,
       "won": 3,
@@ -309,17 +320,6 @@
       "goalDiff": -2,
       "points": 15,
       "prevRank": 7
-    },
-    {
-      "rank": 8,
-      "team": "Java United",
-      "played": 10,
-      "won": 4,
-      "draw": 4,
-      "lost": 2,
-      "goalDiff": 3,
-      "points": 14,
-      "prevRank": 8
     },
     {
       "rank": 9,
