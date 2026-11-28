@@ -1,7 +1,7 @@
 {
   "season": "2026/2027",
   "round": "Pekan 11",
-  "lastUpdated": 1795872189965,
+  "lastUpdated": 1795872254455,
   "matches": [
     {
       "date": "Kamis, 26 Nov",
@@ -42,9 +42,9 @@
     {
       "date": "Sabtu, 28 Nov",
       "isoDate": "2026-11-28",
-      "homeTeam": "PSIM Yogyakarta",
-      "awayTeam": "Persijap Jepara",
-      "scoreOrTime": "2 - 1",
+      "homeTeam": "Bali United",
+      "awayTeam": "Bhayangkara FC",
+      "scoreOrTime": "4 - 0",
       "status": "FT",
       "isFinished": true,
       "isToday": true,
@@ -54,26 +54,14 @@
     {
       "date": "Sabtu, 28 Nov",
       "isoDate": "2026-11-28",
-      "homeTeam": "Bali United",
-      "awayTeam": "Bhayangkara FC",
-      "scoreOrTime": "4 - 0",
+      "homeTeam": "PSIM Yogyakarta",
+      "awayTeam": "Persijap Jepara",
+      "scoreOrTime": "2 - 1",
       "status": "FT",
       "isFinished": true,
       "isToday": true,
       "time": "16:30",
       "fixtureOrder": 14
-    },
-    {
-      "date": "Sabtu, 28 Nov",
-      "isoDate": "2026-11-28",
-      "homeTeam": "Persija Jakarta",
-      "awayTeam": "Garudayaksa FC",
-      "scoreOrTime": "3 - 1",
-      "status": "LIVE",
-      "isFinished": false,
-      "isToday": true,
-      "time": "20:00",
-      "fixtureOrder": 15
     },
     {
       "date": "Sabtu, 28 Nov",
@@ -85,13 +73,25 @@
       "isFinished": false,
       "isToday": true,
       "time": "20:00",
+      "fixtureOrder": 15
+    },
+    {
+      "date": "Sabtu, 28 Nov",
+      "isoDate": "2026-11-28",
+      "homeTeam": "Persija Jakarta",
+      "awayTeam": "Garudayaksa FC",
+      "scoreOrTime": "3 - 1",
+      "status": "LIVE",
+      "isFinished": false,
+      "isToday": true,
+      "time": "20:00",
       "fixtureOrder": 16
     },
     {
       "date": "Minggu, 29 Nov",
       "isoDate": "2026-11-29",
-      "homeTeam": "Arema FC",
-      "awayTeam": "Persebaya",
+      "homeTeam": "Persita",
+      "awayTeam": "Persib Bandung",
       "scoreOrTime": "16:30",
       "status": "",
       "isFinished": false,
@@ -102,8 +102,8 @@
     {
       "date": "Minggu, 29 Nov",
       "isoDate": "2026-11-29",
-      "homeTeam": "Persita",
-      "awayTeam": "Persib Bandung",
+      "homeTeam": "Arema FC",
+      "awayTeam": "Persebaya",
       "scoreOrTime": "16:30",
       "status": "",
       "isFinished": false,
