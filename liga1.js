@@ -9,6 +9,36 @@ const path = require('path');
 const http = require('http');
 
 const DATA_FILE = path.join(__dirname, 'data.json');
+
+// Auto-load .env file if present (checks current dir, parent dir, and botwa dir)
+function loadEnvFile(envPath) {
+  if (fs.existsSync(envPath)) {
+    try {
+      const lines = fs.readFileSync(envPath, 'utf8').split(/\r?\n/);
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed || trimmed.startsWith('#')) continue;
+        const eqIdx = trimmed.indexOf('=');
+        if (eqIdx !== -1) {
+          const key = trimmed.substring(0, eqIdx).trim();
+          let val = trimmed.substring(eqIdx + 1).trim();
+          if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
+            val = val.slice(1, -1);
+          }
+          if (!process.env[key]) {
+            process.env[key] = val;
+          }
+        }
+      }
+    } catch (_) {}
+  }
+}
+[
+  path.join(__dirname, '.env'),
+  path.join(__dirname, '..', '.env'),
+  path.join(__dirname, '..', 'botwa', '.env'),
+].forEach(loadEnvFile);
+
 const PORT = process.env.SERVER_PORT || process.env.PORT || 8080;
 const GITHUB_TOKEN = (process.env.GITHUB_TOKEN || '').trim();
 const GITHUB_REPO = (process.env.GITHUB_REPO || 'dhitxyz/liga1-api').trim();
@@ -596,6 +626,8 @@ async function poll() {
       log('UPDATE', `Live data changed! Today: [${todaySummary}]`);
       if (GITHUB_TOKEN) {
         await syncToGithub(jsonContent);
+      } else {
+        log('WARN', 'GITHUB_TOKEN belum diset di .env! Data tidak dapat disinkronkan ke GitHub repository.');
       }
     } else {
       log('POLLER', `Checked (Mode: ${pollState.label}) - ${todaySummary}`);
@@ -649,10 +681,27 @@ if (process.argv.includes('--once')) {
     log('ONCE', `Scrape complete. Total matches: ${current.matches?.length || 0}. Changed: ${changed}`);
     process.exit(0);
   })();
+} else if (process.env.LIGA1_DISABLE_SERVER === 'true') {
+  log('START', `Liga 1 scraper aktif (mode daemon / background poller).`);
+  if (GITHUB_TOKEN) {
+    log('START', `GitHub auto-sync enabled for ${GITHUB_REPO}`);
+  } else {
+    log('START', `[WARN] GITHUB_TOKEN tidak ditemukan di .env. Data tidak akan disinkronkan ke GitHub!`);
+  }
+  poll();
 } else {
+  server.on('error', (err) => {
+    log('SERVER', `[WARN] Port ${PORT} sibuk (${err.message}). Melanjutkan scraping tanpa server HTTP.`);
+    poll();
+  });
+
   server.listen(PORT, '0.0.0.0', () => {
     log('START', `Liga 1 Node Bot running on port ${PORT}`);
-    if (GITHUB_TOKEN) log('START', `GitHub auto-sync enabled for ${GITHUB_REPO}`);
+    if (GITHUB_TOKEN) {
+      log('START', `GitHub auto-sync enabled for ${GITHUB_REPO}`);
+    } else {
+      log('START', `[WARN] GITHUB_TOKEN tidak ditemukan di .env. Data tidak akan disinkronkan ke GitHub!`);
+    }
     poll();
   });
 }
